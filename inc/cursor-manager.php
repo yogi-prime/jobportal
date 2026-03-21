@@ -270,28 +270,42 @@ function careerhub_cursor_manager_page() {
     }
 
     .cursor-info input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         width: 20px;
         height: 20px;
         min-width: 20px;
         cursor: pointer;
-        accent-color: #00B4D8;
         margin: 0;
         padding: 0;
         flex-shrink: 0;
         position: relative;
+        border: 2px solid #cbd5e1;
+        border-radius: 50%;
+        background: white;
+        transition: all 0.2s ease;
     }
 
-    .cursor-info input[type="radio"]:checked::before {
+    .cursor-info input[type="radio"]:hover {
+        border-color: #00B4D8;
+    }
+
+    .cursor-info input[type="radio"]:checked {
+        border-color: #00B4D8;
+        background: white;
+    }
+
+    .cursor-info input[type="radio"]:checked::after {
         content: "";
-        display: block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #00B4D8;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #00B4D8;
     }
 
     .cursor-info h3 label {
