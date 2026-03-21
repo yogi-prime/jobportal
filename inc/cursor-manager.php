@@ -269,7 +269,6 @@ function careerhub_cursor_manager_page() {
         margin: 0 0 8px;
         font-size: 18px;
         color: #1e293b;
-        line-height: 1.2;
     }
 
     .cursor-info input[type="radio"] {
@@ -278,16 +277,20 @@ function careerhub_cursor_manager_page() {
         min-width: 20px;
         cursor: pointer;
         accent-color: #00B4D8;
-        margin: 0 0 0 0;
+        margin: 0;
+        padding: 0;
         flex-shrink: 0;
+        vertical-align: middle;
     }
 
     .cursor-info h3 label {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         cursor: pointer;
         gap: 10px;
-        line-height: 1;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
     }
 
     .cursor-info p {
