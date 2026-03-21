@@ -285,6 +285,18 @@ function careerhub_cursor_manager_page() {
         border-radius: 50%;
         background: white;
         transition: all 0.2s ease;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .cursor-info input[type="radio"]::-webkit-inner-spin-button,
+    .cursor-info input[type="radio"]::-webkit-outer-spin-button {
+        display: none;
+    }
+
+    .cursor-info input[type="radio"]::before {
+        display: none !important;
+        content: none !important;
     }
 
     .cursor-info input[type="radio"]:hover {
@@ -298,6 +310,7 @@ function careerhub_cursor_manager_page() {
 
     .cursor-info input[type="radio"]:checked::after {
         content: "";
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
