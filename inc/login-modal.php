@@ -187,12 +187,30 @@ function jobportal_login_modal() {
         width: 90%;
         background: white;
         border-radius: 24px;
-        padding: 40px;
-        margin: 50px auto;
-        max-height: 90vh;
+        padding: 32px;
+        margin: 30px auto;
+        max-height: calc(100vh - 60px);
         overflow-y: auto;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         animation: slideUp 0.3s;
+    }
+
+    /* Scrollbar styling for modal */
+    .jobportal-modal-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .jobportal-modal-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .jobportal-modal-content::-webkit-scrollbar-thumb {
+        background: rgba(0, 180, 216, 0.3);
+        border-radius: 10px;
+    }
+
+    .jobportal-modal-content::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 180, 216, 0.6);
     }
 
     @keyframes fadeIn {
