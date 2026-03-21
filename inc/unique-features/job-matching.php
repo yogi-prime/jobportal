@@ -39,7 +39,7 @@ function jobportal_job_matcher_shortcode() {
         color: #1e293b;
         margin-bottom: 16px;
         font-weight: 800;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -77,7 +77,7 @@ function jobportal_job_matcher_shortcode() {
     .question-number {
         display: inline-block;
         padding: 8px 20px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         border-radius: 50px;
         font-size: 14px;
@@ -111,15 +111,15 @@ function jobportal_job_matcher_shortcode() {
     }
 
     .option-card:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #f0f9ff;
         transform: translateY(-4px);
         box-shadow: 0 8px 20px rgba(79, 172, 254, 0.15);
     }
 
     .option-card.selected {
-        border-color: #4facfe;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-color: #00B4D8;
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         box-shadow: 0 8px 30px rgba(79, 172, 254, 0.3);
     }
@@ -165,14 +165,14 @@ function jobportal_job_matcher_shortcode() {
     }
 
     .skill-checkbox:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #f0f9ff;
     }
 
     .skill-checkbox.selected {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
-        border-color: #4facfe;
+        border-color: #00B4D8;
     }
 
     .skill-checkbox input[type="checkbox"] {
@@ -208,7 +208,7 @@ function jobportal_job_matcher_shortcode() {
     }
 
     .btn-next {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         flex: 1;
     }
@@ -233,7 +233,7 @@ function jobportal_job_matcher_shortcode() {
 
     .progress-fill {
         height: 100%;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         transition: width 0.5s ease;
         border-radius: 10px;
     }
@@ -251,7 +251,7 @@ function jobportal_job_matcher_shortcode() {
         text-align: center;
         margin-bottom: 50px;
         padding: 50px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         border-radius: 20px;
     }
@@ -289,20 +289,20 @@ function jobportal_job_matcher_shortcode() {
         left: 0;
         right: 0;
         height: 6px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     }
 
     .matched-job-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-        border-color: #4facfe;
+        border-color: #00B4D8;
     }
 
     .job-match-score {
         position: absolute;
         top: 24px;
         right: 24px;
-        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        background: linear-gradient(135deg, #00C896 0%, #38f9d7 100%);
         color: white;
         padding: 8px 20px;
         border-radius: 50px;
@@ -367,7 +367,7 @@ function jobportal_job_matcher_shortcode() {
     .btn-apply {
         display: inline-block;
         padding: 14px 32px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         text-decoration: none;
         border-radius: 10px;
@@ -386,7 +386,7 @@ function jobportal_job_matcher_shortcode() {
         <div class="matcher-card">
             <div class="matcher-header">
                 <h2 style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-                    <span style="color: #4facfe;"><?php echo jobportal_get_icon('target', 32); ?></span>
+                    <span style="color: #00B4D8;"><?php echo jobportal_get_icon('target', 32); ?></span>
                     Find Your Perfect Job Match
                 </h2>
                 <p>Answer a few questions and get personalized job recommendations powered by our AI algorithm</p>

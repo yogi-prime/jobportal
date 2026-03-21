@@ -40,7 +40,7 @@ $current_user = wp_get_current_user();
 <div class="jobportal-container" style="padding: 40px 20px;">
     <!-- Quiz Header -->
     <div id="quiz-header" style="
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         padding: 40px;
         border-radius: 20px;
         color: white;
@@ -135,7 +135,7 @@ $current_user = wp_get_current_user();
                 </div>
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span style="font-size: 24px;">⏱️</span>
-                    <span id="quiz-timer" style="font-size: 24px; font-weight: 800; color: #4facfe;">
+                    <span id="quiz-timer" style="font-size: 24px; font-weight: 800; color: #00B4D8;">
                         <?php echo $quiz['duration']; ?>:00
                     </span>
                 </div>
@@ -151,7 +151,7 @@ $current_user = wp_get_current_user();
             ">
                 <div id="progress-bar" style="
                     height: 100%;
-                    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                     width: 0%;
                     transition: width 0.3s ease;
                 "></div>

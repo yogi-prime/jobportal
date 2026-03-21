@@ -86,17 +86,17 @@ function jobportal_setup() {
         array(
             'name'  => esc_html__('Primary', 'jobportal'),
             'slug'  => 'primary',
-            'color' => '#4facfe',
+            'color' => '#00B4D8',
         ),
         array(
             'name'  => esc_html__('Secondary', 'jobportal'),
             'slug'  => 'secondary',
-            'color' => '#00f2fe',
+            'color' => '#00C896',
         ),
         array(
             'name'  => esc_html__('Accent', 'jobportal'),
             'slug'  => 'accent',
-            'color' => '#43e97b',
+            'color' => '#00C896',
         ),
         array(
             'name'  => esc_html__('Dark', 'jobportal'),
@@ -186,14 +186,6 @@ function jobportal_scripts() {
         JOBPORTAL_VERSION
     );
 
-    // Dark Mode Styles
-    wp_enqueue_style(
-        'jobportal-dark-mode',
-        JOBPORTAL_ASSETS . '/css/dark-mode.css',
-        array('jobportal-main'),
-        JOBPORTAL_VERSION
-    );
-
     // Premium Animations CSS
     wp_enqueue_style(
         'jobportal-animations',
@@ -216,15 +208,6 @@ function jobportal_scripts() {
         JOBPORTAL_ASSETS . '/css/skills-assessment.css',
         array('jobportal-main'),
         JOBPORTAL_VERSION
-    );
-
-    // Dark Mode Script
-    wp_enqueue_script(
-        'jobportal-dark-mode',
-        JOBPORTAL_ASSETS . '/js/dark-mode.js',
-        array(),
-        JOBPORTAL_VERSION,
-        false // Load in header for instant theme application
     );
 
     // Scroll Animations Script
@@ -884,37 +867,52 @@ add_action('wp_head', 'jobportal_schema_markup');
 // Feature #1: Resume Builder Tool
 // Interactive drag-drop resume creator with live preview
 // Shortcode: [jobportal_resume_builder]
+// Note: Already included via inc/resume-system.php
+/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/resume-builder.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/resume-builder.php';
 }
+*/
 
 // Feature #2: Job Matching Algorithm
 // AI-powered job recommendations with quiz interface
 // Shortcode: [jobportal_job_matcher]
+// Note: Already included via other inc files
+/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/job-matching.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/job-matching.php';
 }
+*/
 
 // Feature #3: Applicant Tracking System (ATS)
 // Employer dashboard for managing applications
 // Shortcode: [jobportal_ats_dashboard]
+// Note: Already included via other inc files
+/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/ats-dashboard.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/ats-dashboard.php';
 }
+*/
 
 // Feature #4: Salary Calculator
 // Industry salary estimator with market comparison
 // Shortcode: [jobportal_salary_calculator]
+// Note: Already included via other inc files
+/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/salary-calculator.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/salary-calculator.php';
 }
+*/
 
 // Feature #5: Interview Scheduler
 // Calendar-based interview scheduling with time slots
 // Shortcode: [jobportal_interview_scheduler]
+// Note: Already included via other inc files
+/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/interview-scheduler.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/interview-scheduler.php';
 }
+*/
 
 /**
  * Limit Widget Items and Customize Display
@@ -1140,3 +1138,63 @@ function jobportal_truncate_category_names($output, $args) {
     return $output;
 }
 add_filter('wp_list_categories', 'jobportal_truncate_category_names', 10, 2);
+
+/**
+ * Auto-upload Logo to Media Library on Theme Activation
+ * This uploads the Career Hub logo files to WordPress media library
+ * when theme is activated for the first time
+ */
+function jobportal_setup_default_logo() {
+    // Check if logo is already set
+    if (get_theme_mod('custom_logo')) {
+        return;
+    }
+
+    // Check if we already ran this
+    if (get_option('jobportal_logo_uploaded')) {
+        return;
+    }
+
+    // Require WordPress file functions
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+    require_once(ABSPATH . 'wp-admin/includes/media.php');
+
+    // Path to logo file
+    $logo_path = get_template_directory() . '/assets/images/logo.png';
+
+    // Check if logo file exists
+    if (!file_exists($logo_path)) {
+        return;
+    }
+
+    // Upload logo to media library
+    $filename = basename($logo_path);
+    $upload_file = wp_upload_bits($filename, null, file_get_contents($logo_path));
+
+    if (!$upload_file['error']) {
+        $wp_filetype = wp_check_filetype($filename, null);
+
+        $attachment = array(
+            'post_mime_type' => $wp_filetype['type'],
+            'post_title'     => 'Career Hub Logo',
+            'post_content'   => '',
+            'post_status'    => 'inherit'
+        );
+
+        $attachment_id = wp_insert_attachment($attachment, $upload_file['file']);
+
+        if (!is_wp_error($attachment_id)) {
+            // Generate attachment metadata
+            $attachment_data = wp_generate_attachment_metadata($attachment_id, $upload_file['file']);
+            wp_update_attachment_metadata($attachment_id, $attachment_data);
+
+            // Set as site logo
+            set_theme_mod('custom_logo', $attachment_id);
+
+            // Mark as uploaded
+            update_option('jobportal_logo_uploaded', true);
+        }
+    }
+}
+add_action('after_switch_theme', 'jobportal_setup_default_logo');

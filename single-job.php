@@ -24,7 +24,7 @@ while (have_posts()) : the_post();
 <div class="jobportal-single-job">
 
 <!-- Job Header -->
-<section style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 140px 20px 60px;">
+<section style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; padding: 140px 20px 60px;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <div style="display: flex; justify-content: space-between; align-items: start; gap: 24px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px;">
@@ -47,7 +47,7 @@ while (have_posts()) : the_post();
             </div>
             <div style="display: flex; gap: 12px; align-items: center;">
                 <button onclick="jobportalOpenApplyModal(<?php echo $job_id; ?>, '<?php echo esc_js($job_title); ?>')"
-                        style="padding: 16px 40px; background: white; color: #4facfe; border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+                        style="padding: 16px 40px; background: white; color: #00B4D8; border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
                     <?php _e('Apply Now', 'jobportal'); ?>
                 </button>
             </div>
@@ -136,7 +136,7 @@ while (have_posts()) : the_post();
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
                     <?php foreach ($benefits as $benefit) : ?>
                         <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                            <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;">
+                            <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;">
                                 <?php echo jobportal_get_icon('check-circle', 24); ?>
                             </div>
                             <div style="font-weight: 600; color: #1e293b;"><?php echo esc_html($benefit); ?></div>
@@ -155,7 +155,7 @@ while (have_posts()) : the_post();
                     <?php _e('Apply for this Job', 'jobportal'); ?>
                 </h3>
                 <button onclick="jobportalOpenApplyModal(<?php echo $job_id; ?>, '<?php echo esc_js($job_title); ?>')"
-                        style="width: 100%; padding: 16px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 12px; box-shadow: 0 4px 16px rgba(79,172,254,0.3);">
+                        style="width: 100%; padding: 16px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 12px; box-shadow: 0 4px 16px rgba(79,172,254,0.3);">
                     <?php _e('Apply Now', 'jobportal'); ?>
                 </button>
 
@@ -189,7 +189,7 @@ while (have_posts()) : the_post();
                 <h3 style="font-size: 22px; margin-bottom: 20px; color: #1e293b; font-weight: 800;">
                     <?php printf(__('About %s', 'jobportal'), esc_html($company)); ?>
                 </h3>
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">
                     <?php echo strtoupper(substr($company, 0, 2)); ?>
                 </div>
                 <?php if ($company_description) : ?>
@@ -218,7 +218,7 @@ while (have_posts()) : the_post();
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <?php echo jobportal_get_icon('globe', 16); ?>
                         <strong><?php _e('Website:', 'jobportal'); ?></strong>
-                        <a href="<?php echo esc_url($company_website); ?>" target="_blank" style="color: #4facfe;">
+                        <a href="<?php echo esc_url($company_website); ?>" target="_blank" style="color: #00B4D8;">
                             <?php echo esc_html(parse_url($company_website, PHP_URL_HOST)); ?>
                         </a>
                     </div>
@@ -270,7 +270,7 @@ if ($similar_jobs) :
                     </span>
                 </div>
                 <a href="<?php echo get_permalink($similar_job->ID); ?>"
-                   style="display: inline-block; padding: 10px 24px; background: #4facfe; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
+                   style="display: inline-block; padding: 10px 24px; background: #00B4D8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
                     <?php _e('View Job', 'jobportal'); ?>
                 </a>
             </div>

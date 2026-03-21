@@ -72,7 +72,7 @@ get_header();
                             <div style="
                                 width: 80px;
                                 height: 80px;
-                                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                                background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                                 border-radius: 12px;
                                 display: flex;
                                 align-items: center;
@@ -98,7 +98,7 @@ get_header();
                                         <span style="
                                             padding: 4px 12px;
                                             background: #eff6ff;
-                                            color: #4facfe;
+                                            color: #00B4D8;
                                             border-radius: 12px;
                                             font-size: 12px;
                                             font-weight: 600;

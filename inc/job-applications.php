@@ -119,7 +119,7 @@ function jobportal_application_details_callback($post) {
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            background: #4facfe;
+            background: #00B4D8;
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -133,7 +133,7 @@ function jobportal_application_details_callback($post) {
         .jobportal-applicant-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: #43e97b;
+            background: #00C896;
             color: white;
             border-radius: 20px;
             font-size: 11px;
@@ -276,7 +276,7 @@ function jobportal_application_status_callback($post) {
             margin-top: 15px;
             padding: 12px;
             background: #f0f9ff;
-            border-left: 4px solid #4facfe;
+            border-left: 4px solid #00B4D8;
             font-size: 12px;
             line-height: 1.6;
         }

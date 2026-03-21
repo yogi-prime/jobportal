@@ -92,7 +92,7 @@ function jobportal_elite_dashboard_page() {
 
             <!-- Welcome Card -->
             <div class="jobportal-card jobportal-welcome-card">
-                <h2 style="display: flex; align-items: center; gap: 8px;"><?php esc_html_e('Welcome to JobPortal Elite!', 'jobportal'); ?> <span style="color: #4facfe;"><?php echo jobportal_get_icon('zap', 24); ?></span></h2>
+                <h2 style="display: flex; align-items: center; gap: 8px;"><?php esc_html_e('Welcome to JobPortal Elite!', 'jobportal'); ?> <span style="color: #00B4D8;"><?php echo jobportal_get_icon('zap', 24); ?></span></h2>
                 <p><?php esc_html_e('Thank you for choosing JobPortal Elite - Premium WordPress Theme with Advanced Features.', 'jobportal'); ?></p>
 
                 <div class="jobportal-quick-links">

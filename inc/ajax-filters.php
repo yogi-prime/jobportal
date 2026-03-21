@@ -146,7 +146,7 @@ function jobportal_ajax_filter_jobs() {
                 </div>
 
                 <div style="display: flex; gap: 12px;">
-                    <a href="<?php the_permalink(); ?>" style="flex: 1; padding: 12px; text-align: center; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s;">
+                    <a href="<?php the_permalink(); ?>" style="flex: 1; padding: 12px; text-align: center; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s;">
                         <?php _e('Apply Now', 'jobportal'); ?>
                     </a>
                     <button onclick="saveJob(<?php echo $job_id; ?>)" style="width: 44px; height: 44px; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
@@ -166,7 +166,7 @@ function jobportal_ajax_filter_jobs() {
             <p style="color: #64748b; font-size: 16px; max-width: 400px; margin: 0 auto 24px;">
                 <?php _e('Try adjusting your filters or search terms to find more opportunities.', 'jobportal'); ?>
             </p>
-            <button onclick="document.getElementById('clear-filters').click()" style="padding: 12px 24px; background: #4facfe; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            <button onclick="document.getElementById('clear-filters').click()" style="padding: 12px 24px; background: #00B4D8; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
                 <?php _e('Clear All Filters', 'jobportal'); ?>
             </button>
         </div>

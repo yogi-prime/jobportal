@@ -86,7 +86,7 @@ get_header();
 }
 
 .jobportal-btn-primary {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     color: white;
     border: none;
     box-shadow: 0 4px 16px rgba(79, 172, 254, 0.3);
@@ -104,8 +104,8 @@ get_header();
 }
 
 .jobportal-btn-secondary:hover {
-    border-color: #4facfe;
-    color: #4facfe;
+    border-color: #00B4D8;
+    color: #00B4D8;
 }
 
 /* Stats Cards */
@@ -168,8 +168,8 @@ get_header();
 }
 
 .jobportal-tab.active {
-    color: #4facfe;
-    border-bottom-color: #4facfe;
+    color: #00B4D8;
+    border-bottom-color: #00B4D8;
 }
 
 .jobportal-tab-content {
@@ -349,7 +349,7 @@ get_header();
         <!-- Stats Grid -->
         <div class="jobportal-stats-grid">
             <div class="jobportal-stat-card">
-                <div class="jobportal-stat-icon" style="background: rgba(79, 172, 254, 0.1); color: #4facfe;">
+                <div class="jobportal-stat-icon" style="background: rgba(79, 172, 254, 0.1); color: #00B4D8;">
                     📄
                 </div>
                 <div class="jobportal-stat-value"><?php echo count($applications); ?></div>

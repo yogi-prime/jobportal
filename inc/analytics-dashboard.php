@@ -209,7 +209,7 @@ function jobportal_analytics_dashboard_shortcode() {
                 padding: 28px;
                 border-radius: 16px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                border-left: 4px solid #4facfe;
+                border-left: 4px solid #00B4D8;
             ">
                 <div style="color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
                     Total Jobs
@@ -367,7 +367,7 @@ function jobportal_analytics_dashboard_shortcode() {
                                     <div style="
                                         width: 32px;
                                         height: 32px;
-                                        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                                        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                                         border-radius: 50%;
                                         display: flex;
                                         align-items: center;
@@ -398,7 +398,7 @@ function jobportal_analytics_dashboard_shortcode() {
                                 <td style="padding: 16px; text-align: center; font-weight: 600; color: #64748b;">
                                     <?php echo number_format($job['views']); ?>
                                 </td>
-                                <td style="padding: 16px; text-align: center; font-weight: 700; color: #4facfe;">
+                                <td style="padding: 16px; text-align: center; font-weight: 700; color: #00B4D8;">
                                     <?php echo $job['conversion_rate']; ?>%
                                 </td>
                                 <td style="padding: 16px; color: #64748b; font-size: 14px;">
@@ -429,11 +429,11 @@ function jobportal_analytics_dashboard_shortcode() {
                     datasets: [{
                         label: 'New Users',
                         data: monthlyData.map(function(item) { return item.count; }),
-                        borderColor: '#4facfe',
+                        borderColor: '#00B4D8',
                         backgroundColor: 'rgba(79, 172, 254, 0.1)',
                         tension: 0.4,
                         fill: true,
-                        pointBackgroundColor: '#4facfe',
+                        pointBackgroundColor: '#00B4D8',
                         pointBorderColor: '#fff',
                         pointBorderWidth: 2,
                         pointRadius: 6,

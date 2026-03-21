@@ -182,7 +182,7 @@
 
 .jobportal-job-card:hover .jobportal-job-title,
 .jobportal-stat-card:hover .jobportal-stat-value {
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
@@ -428,14 +428,14 @@ body.dark-mode .jobportal-glass:hover {
    ============================================ */
 
 *:focus-visible {
-    outline: 3px solid #4facfe;
+    outline: 3px solid #00B4D8;
     outline-offset: 2px;
     border-radius: 4px;
 }
 
 .jobportal-btn:focus-visible,
 .jobportal-tab:focus-visible {
-    outline: 3px solid #4facfe;
+    outline: 3px solid #00B4D8;
     outline-offset: 4px;
 }
 

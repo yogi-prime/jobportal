@@ -56,13 +56,13 @@ $seo_overview = jobportal_get_seo_overview();
 }
 
 .admin-tab:hover {
-    color: #4facfe;
+    color: #00B4D8;
     background: #f8fafc;
 }
 
 .admin-tab.active {
-    color: #4facfe;
-    border-bottom-color: #4facfe;
+    color: #00B4D8;
+    border-bottom-color: #00B4D8;
     background: #eff6ff;
 }
 
@@ -157,7 +157,7 @@ $seo_overview = jobportal_get_seo_overview();
 }
 
 .action-btn-primary {
-    background: #4facfe;
+    background: #00B4D8;
     color: white;
 }
 
@@ -205,7 +205,7 @@ $seo_overview = jobportal_get_seo_overview();
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #4facfe;
+    border-color: #00B4D8;
     outline: none;
 }
 </style>
@@ -238,7 +238,7 @@ $seo_overview = jobportal_get_seo_overview();
     <div class="admin-tab-content active" id="tab-overview">
         <!-- Stats Cards -->
         <div class="stat-grid">
-            <div class="stat-card" style="border-left-color: #4facfe;">
+            <div class="stat-card" style="border-left-color: #00B4D8;">
                 <div style="color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
                     Total Jobs
                 </div>
@@ -338,7 +338,7 @@ $seo_overview = jobportal_get_seo_overview();
         <!-- Quick Actions -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 40px;">
             <a href="<?php echo admin_url('post-new.php?post_type=job'); ?>" style="
-                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                 padding: 32px;
                 border-radius: 16px;
                 color: white;
@@ -781,7 +781,7 @@ $seo_overview = jobportal_get_seo_overview();
                         <?php foreach ($traffic_stats['jobs'] as $job) : ?>
                             <tr>
                                 <td>
-                                    <a href="<?php echo get_permalink($job->ID); ?>" target="_blank" style="color: #4facfe; text-decoration: none; font-weight: 600;">
+                                    <a href="<?php echo get_permalink($job->ID); ?>" target="_blank" style="color: #00B4D8; text-decoration: none; font-weight: 600;">
                                         <?php echo esc_html($job->post_title); ?>
                                     </a>
                                 </td>
@@ -810,7 +810,7 @@ $seo_overview = jobportal_get_seo_overview();
                         <?php foreach ($traffic_stats['companies'] as $company) : ?>
                             <tr>
                                 <td>
-                                    <a href="<?php echo get_permalink($company->ID); ?>" target="_blank" style="color: #4facfe; text-decoration: none; font-weight: 600;">
+                                    <a href="<?php echo get_permalink($company->ID); ?>" target="_blank" style="color: #00B4D8; text-decoration: none; font-weight: 600;">
                                         <?php echo esc_html($company->post_title); ?>
                                     </a>
                                 </td>

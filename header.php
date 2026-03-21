@@ -51,7 +51,7 @@
                         <?php the_custom_logo(); ?>
                     <?php else : ?>
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="jobportal-site-logo-link" rel="home">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.svg'); ?>" alt="<?php bloginfo('name'); ?>" height="50">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="Career Hub" height="50">
                         </a>
                     <?php endif; ?>
                 </div>
@@ -84,14 +84,17 @@
                 </nav>
 
                 <div class="jobportal-header-actions">
-                    <?php
-                    $cta_text = get_theme_mod('jobportal_header_cta_text', __('Post a Job', 'jobportal'));
-                    $cta_url = get_theme_mod('jobportal_header_cta_url', home_url('/post-job'));
-                    if (!empty($cta_text)) :
-                    ?>
-                    <a href="<?php echo esc_url($cta_url); ?>" class="jobportal-btn jobportal-btn-primary jobportal-header-cta">
-                        <?php echo esc_html($cta_text); ?>
-                    </a>
+                    <?php if (is_user_logged_in()) : ?>
+                        <a href="<?php echo esc_url(home_url('/dashboard')); ?>" class="jobportal-btn jobportal-btn-outline" style="margin-right: 10px;">
+                            <?php esc_html_e('Dashboard', 'jobportal'); ?>
+                        </a>
+                        <a href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>" class="jobportal-btn jobportal-btn-primary jobportal-header-cta">
+                            <?php esc_html_e('Logout', 'jobportal'); ?>
+                        </a>
+                    <?php else : ?>
+                        <a href="<?php echo esc_url(home_url('/login')); ?>" class="jobportal-btn jobportal-btn-primary jobportal-header-cta">
+                            <?php esc_html_e('Login', 'jobportal'); ?>
+                        </a>
                     <?php endif; ?>
 
                     <button class="jobportal-mobile-toggle" id="mobile-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle mobile menu', 'jobportal'); ?>">
@@ -146,13 +149,20 @@
                 ?>
             </nav>
 
-            <?php if (!empty($cta_text)) : ?>
             <div class="jobportal-mobile-menu-footer">
-                <a href="<?php echo esc_url($cta_url); ?>" class="jobportal-btn jobportal-btn-primary jobportal-btn-block">
-                    <?php echo esc_html($cta_text); ?>
-                </a>
+                <?php if (is_user_logged_in()) : ?>
+                    <a href="<?php echo esc_url(home_url('/dashboard')); ?>" class="jobportal-btn jobportal-btn-outline jobportal-btn-block" style="margin-bottom: 10px;">
+                        <?php esc_html_e('Dashboard', 'jobportal'); ?>
+                    </a>
+                    <a href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>" class="jobportal-btn jobportal-btn-primary jobportal-btn-block">
+                        <?php esc_html_e('Logout', 'jobportal'); ?>
+                    </a>
+                <?php else : ?>
+                    <a href="<?php echo esc_url(home_url('/login')); ?>" class="jobportal-btn jobportal-btn-primary jobportal-btn-block">
+                        <?php esc_html_e('Login', 'jobportal'); ?>
+                    </a>
+                <?php endif; ?>
             </div>
-            <?php endif; ?>
         </div>
     </div>
 

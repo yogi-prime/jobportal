@@ -61,7 +61,7 @@ function jobportal_admin_create_pages_notice() {
 
     $missing_count = count($missing_pages);
     ?>
-    <div class="notice notice-warning is-dismissible" style="padding: 20px; border-left: 4px solid #4facfe;">
+    <div class="notice notice-warning is-dismissible" style="padding: 20px; border-left: 4px solid #00B4D8;">
         <h2 style="margin-top: 0;">⚠️ Missing Pages Detected</h2>
         <p style="font-size: 14px;"><strong><?php echo $missing_count; ?> JobPortal page(s) are missing.</strong> Click the button below to create them:</p>
         <ul style="list-style: disc; margin-left: 20px; font-size: 14px;">
@@ -75,7 +75,7 @@ function jobportal_admin_create_pages_notice() {
             <li><strong>About, Contact, Blog</strong> pages</li>
         </ul>
         <p>
-            <a href="<?php echo esc_url($create_url); ?>" class="button button-primary button-hero" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border: none; text-shadow: none; box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);">
+            <a href="<?php echo esc_url($create_url); ?>" class="button button-primary button-hero" style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border: none; text-shadow: none; box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);">
                 ✨ Create All Pages Now
             </a>
         </p>
@@ -144,8 +144,8 @@ function jobportal_create_pages_admin_page() {
             <h2 style="margin-top: 0;">📋 Pages That Will Be Created</h2>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
-                <div style="padding: 20px; background: #f0f9ff; border-left: 4px solid #4facfe; border-radius: 4px;">
-                    <h3 style="margin-top: 0; color: #4facfe;">🎯 Elite Feature Pages</h3>
+                <div style="padding: 20px; background: #f0f9ff; border-left: 4px solid #00B4D8; border-radius: 4px;">
+                    <h3 style="margin-top: 0; color: #00B4D8;">🎯 Elite Feature Pages</h3>
                     <ul style="margin: 0; padding-left: 20px;">
                         <li><strong>Resume Builder</strong> - Professional resume creator</li>
                         <li><strong>Job Matcher</strong> - AI-powered job matching</li>
@@ -175,7 +175,7 @@ function jobportal_create_pages_admin_page() {
                 </p>
 
                 <p>
-                    <button type="submit" name="create_pages" class="button button-primary button-hero" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border: none; padding: 15px 40px; font-size: 16px; height: auto; box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);">
+                    <button type="submit" name="create_pages" class="button button-primary button-hero" style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border: none; padding: 15px 40px; font-size: 16px; height: auto; box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);">
                         ✨ Create All Pages Now
                     </button>
                 </p>

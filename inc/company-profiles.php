@@ -190,7 +190,7 @@ function jobportal_company_details_callback($post) {
         }
         .jobportal-meta-field input:focus,
         .jobportal-meta-field select:focus {
-            border-color: #4facfe;
+            border-color: #00B4D8;
             outline: none;
         }
     </style>
@@ -316,7 +316,7 @@ function jobportal_company_stats_callback($post) {
         <div style="display: grid; gap: 12px;">
             <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 6px;">
                 <span style="color: #64748b; font-weight: 600;">Total Jobs:</span>
-                <strong style="color: #4facfe;"><?php echo $total_jobs; ?></strong>
+                <strong style="color: #00B4D8;"><?php echo $total_jobs; ?></strong>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 6px;">
                 <span style="color: #64748b; font-weight: 600;">Profile Views:</span>
@@ -519,7 +519,7 @@ function jobportal_display_company_card($company_id, $show_jobs = true) {
                      alt="<?php echo esc_attr($company->post_title); ?>"
                      style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: #f8fafc; padding: 12px;">
             <?php else : ?>
-                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: white; font-weight: 800;">
+                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: white; font-weight: 800;">
                     <?php echo substr($company->post_title, 0, 1); ?>
                 </div>
             <?php endif; ?>
@@ -538,7 +538,7 @@ function jobportal_display_company_card($company_id, $show_jobs = true) {
                         <span>👥 <?php echo esc_html($employees); ?> employees</span>
                     <?php endif; ?>
                     <?php if ($show_jobs && $jobs_count > 0) : ?>
-                        <span style="color: #4facfe; font-weight: 600;">💼 <?php echo $jobs_count; ?> open positions</span>
+                        <span style="color: #00B4D8; font-weight: 600;">💼 <?php echo $jobs_count; ?> open positions</span>
                     <?php endif; ?>
                 </div>
                 <p style="color: #64748b; line-height: 1.6; margin-bottom: 16px;">

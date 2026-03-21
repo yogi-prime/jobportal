@@ -1,0 +1,22 @@
+<svg width="140" height="160" viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="70" cy="45" r="38" fill="url(#grad1)"/>
+
+  <!-- Briefcase Icon (Larger) -->
+  <rect x="53" y="35" width="34" height="22" rx="2" fill="white" opacity="0.9"/>
+  <rect x="62" y="28" width="16" height="8" fill="white" opacity="0.9"/>
+  <line x1="57" y1="46" x2="83" y2="46" stroke="white" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- Text (Vertical Layout) -->
+  <text x="70" y="105" font-family="'Inter', 'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">Career</text>
+  <text x="70" y="130" font-family="'Inter', 'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">Hub</text>
+  <text x="70" y="148" font-family="Arial, sans-serif" font-size="8" font-weight="normal" fill="#ffffff" opacity="0.7" text-anchor="middle" letter-spacing="1.5">YOUR CAREER PARTNER</text>
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b4d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00c896;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

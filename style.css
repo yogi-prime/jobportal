@@ -1,9 +1,9 @@
 /*
-Theme Name: JobPortal Elite
-Theme URI: https://jobportaltheme.com
-Author: ThemeJobPortal
-Author URI: https://jobportaltheme.com
-Description: JobPortal Elite is a premium job board WordPress theme with 5 UNIQUE features competitors don't have. ELITE FEATURES: Resume Builder Tool (drag-drop with live preview), AI-Powered Job Matching Algorithm (personalized quiz), Applicant Tracking System (employer dashboard), Salary Calculator (industry data + negotiation tips), Interview Scheduler (calendar integration). Plus: Advanced Admin Panel, Elementor widgets, One-click demo import, WooCommerce ready, SEO optimized, Schema markup, GDPR compliant, and blazing fast performance. $240 value in unique features!
+Theme Name: Career Hub
+Theme URI: https://careerhub.com
+Author: Career Hub Team
+Author URI: https://careerhub.com
+Description: Career Hub is a premium job board WordPress theme with 5 UNIQUE features competitors don't have. ELITE FEATURES: Resume Builder Tool (drag-drop with live preview), AI-Powered Job Matching Algorithm (personalized quiz), Applicant Tracking System (employer dashboard), Salary Calculator (industry data + negotiation tips), Interview Scheduler (calendar integration). Plus: Advanced Admin Panel, Elementor widgets, One-click demo import, WooCommerce ready, SEO optimized, Schema markup, GDPR compliant, and blazing fast performance. $240 value in unique features!
 Version: 2.0.0
 Requires at least: 6.0
 Tested up to: 6.4
@@ -13,8 +13,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: jobportal
 Tags: job-board, recruitment, careers, job-listing, resume, applicant-tracking, job-portal, employment, hiring, hr, one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, translation-ready, wide-blocks, blog, e-commerce, portfolio
 
-JobPortal Elite WordPress Theme, Copyright 2024 ThemeJobPortal
-JobPortal is distributed under the terms of the GNU GPL v2 or later.
+Career Hub WordPress Theme, Copyright 2024 Career Hub Team
+Career Hub is distributed under the terms of the GNU GPL v2 or later.
 */
 
 /* ==========================================================================
@@ -48,29 +48,30 @@ JobPortal is distributed under the terms of the GNU GPL v2 or later.
    1. CSS VARIABLES (DESIGN TOKENS)
    ========================================================================== */
 :root {
-    /* Brand Colors */
-    --jobportal-primary: #4facfe;
-    --jobportal-primary-hover: #4f46e5;
-    --jobportal-primary-light: #e0e7ff;
-    --jobportal-primary-dark: #4338ca;
+    /* 🎨 Career Hub Brand Colors - Based on Logo */
+    --jobportal-primary: #00B4D8;          /* Cyan - Main brand color */
+    --jobportal-primary-hover: #0096B8;    /* Darker cyan for hover */
+    --jobportal-primary-light: #E0F7FA;    /* Light cyan background */
+    --jobportal-primary-dark: #1B3A5F;     /* Navy blue - Professional dark */
 
-    --jobportal-secondary: #43e97b;
-    --jobportal-secondary-hover: #0891b2;
-    --jobportal-secondary-light: #cffafe;
+    --jobportal-secondary: #00C896;        /* Teal green - Fresh accent */
+    --jobportal-secondary-hover: #00A67D;  /* Darker teal for hover */
+    --jobportal-secondary-light: #D0F5E9;  /* Light teal background */
 
     /* Accent Colors */
-    --jobportal-accent: #f59e0b;
-    --jobportal-accent-hover: #d97706;
+    --jobportal-accent: #1B3A5F;           /* Navy blue - Strong contrast */
+    --jobportal-accent-hover: #162E4D;     /* Deeper navy */
+    --jobportal-accent-light: #E3EAF2;     /* Light navy background */
 
     /* Semantic Colors */
-    --jobportal-success: #10b981;
-    --jobportal-success-light: #d1fae5;
-    --jobportal-warning: #f59e0b;
-    --jobportal-warning-light: #fef3c7;
-    --jobportal-error: #ef4444;
-    --jobportal-error-light: #fee2e2;
-    --jobportal-info: #3b82f6;
-    --jobportal-info-light: #dbeafe;
+    --jobportal-success: #00C896;          /* Teal green - matches brand */
+    --jobportal-success-light: #D0F5E9;
+    --jobportal-warning: #FFA726;          /* Warm orange */
+    --jobportal-warning-light: #FFE0B2;
+    --jobportal-error: #EF5350;            /* Coral red */
+    --jobportal-error-light: #FFEBEE;
+    --jobportal-info: #00B4D8;             /* Cyan - matches brand */
+    --jobportal-info-light: #E0F7FA;
 
     /* Neutral Colors */
     --jobportal-white: #ffffff;
@@ -87,12 +88,13 @@ JobPortal is distributed under the terms of the GNU GPL v2 or later.
     --jobportal-gray-900: #0f172a;
     --jobportal-gray-950: #020617;
 
-    /* Gradients */
-    --jobportal-gradient-primary: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #a855f7 100%);
-    --jobportal-gradient-secondary: linear-gradient(135deg, #43e97b 0%, #3b82f6 100%);
-    --jobportal-gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --jobportal-gradient-light: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-    --jobportal-gradient-hero: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+    /* 🌈 Career Hub Gradients - Logo Inspired */
+    --jobportal-gradient-primary: linear-gradient(135deg, #1B3A5F 0%, #00B4D8 50%, #00C896 100%);      /* Navy → Cyan → Teal */
+    --jobportal-gradient-secondary: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);                 /* Cyan → Teal */
+    --jobportal-gradient-dark: linear-gradient(135deg, #1B3A5F 0%, #0f172a 100%);                      /* Navy → Dark */
+    --jobportal-gradient-light: linear-gradient(180deg, #E0F7FA 0%, #ffffff 100%);                     /* Light cyan → White */
+    --jobportal-gradient-hero: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 200, 150, 0.05) 100%); /* Cyan/Teal overlay */
+    --jobportal-gradient-card: linear-gradient(135deg, rgba(27, 58, 95, 0.03) 0%, rgba(0, 180, 216, 0.03) 100%); /* Subtle card gradient */
 
     /* Typography */
     --jobportal-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -188,7 +190,7 @@ JobPortal is distributed under the terms of the GNU GPL v2 or later.
 /* Dark Mode Variables */
 [data-theme="dark"] {
     --jobportal-primary: #818cf8;
-    --jobportal-primary-hover: #4facfe;
+    --jobportal-primary-hover: #00B4D8;
     --jobportal-primary-light: #312e81;
 
     --jobportal-gray-50: #0f172a;

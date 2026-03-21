@@ -295,14 +295,14 @@ function jobportal_ats_dashboard_shortcode() {
     }
 
     .jp-btn-primary {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: #fff;
     }
 
     .jp-btn-outline {
         background: #fff;
-        border: 2px solid #4facfe;
-        color: #4facfe;
+        border: 2px solid #00B4D8;
+        color: #00B4D8;
     }
 
     .jp-btn-secondary {
@@ -392,7 +392,7 @@ function jobportal_ats_dashboard_shortcode() {
 
     .jp-tab.active {
         background: #fff;
-        color: #4facfe;
+        color: #00B4D8;
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
@@ -449,7 +449,7 @@ function jobportal_ats_dashboard_shortcode() {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: #fff;
         display: flex;
         align-items: center;
@@ -531,8 +531,8 @@ function jobportal_ats_dashboard_shortcode() {
     }
 
     .jp-action-btn:hover {
-        background: #4facfe;
-        border-color: #4facfe;
+        background: #00B4D8;
+        border-color: #00B4D8;
         color: #fff;
     }
 

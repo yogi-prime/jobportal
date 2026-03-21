@@ -236,12 +236,12 @@ function jobportal_interview_scheduler_shortcode() {
         border-radius: 8px;
         cursor: pointer;
         font-size: 18px;
-        color: #4facfe;
+        color: #00B4D8;
         transition: all 0.2s;
     }
 
     .jp-cal-nav:hover {
-        background: #4facfe;
+        background: #00B4D8;
         color: #fff;
     }
 
@@ -275,11 +275,11 @@ function jobportal_interview_scheduler_shortcode() {
 
     .jp-cal-day:hover {
         background: #e0e7ff;
-        color: #4facfe;
+        color: #00B4D8;
     }
 
     .jp-cal-day.selected {
-        background: #4facfe;
+        background: #00B4D8;
         color: #fff;
     }
 
@@ -310,7 +310,7 @@ function jobportal_interview_scheduler_shortcode() {
     .jp-selected-date span {
         display: block;
         margin-top: 4px;
-        color: #4facfe;
+        color: #00B4D8;
         font-weight: 600;
     }
 
@@ -371,14 +371,14 @@ function jobportal_interview_scheduler_shortcode() {
     }
 
     .jp-time-slot:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #e0e7ff;
-        color: #4facfe;
+        color: #00B4D8;
     }
 
     .jp-time-slot.selected {
-        background: #4facfe;
-        border-color: #4facfe;
+        background: #00B4D8;
+        border-color: #00B4D8;
         color: #fff;
     }
 
@@ -462,7 +462,7 @@ function jobportal_interview_scheduler_shortcode() {
 
     .jp-input:focus, .jp-textarea:focus {
         outline: none;
-        border-color: #4facfe;
+        border-color: #00B4D8;
         box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
     }
 
@@ -483,7 +483,7 @@ function jobportal_interview_scheduler_shortcode() {
     }
 
     .jp-btn-primary {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: #fff;
     }
 

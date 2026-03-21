@@ -18,7 +18,7 @@
     --color-text-muted: #94a3b8;
     --color-border: #334155;
     --color-border-light: #475569;
-    --color-primary: #4facfe;
+    --color-primary: #00B4D8;
     --color-primary-hover: #38bdf8;
     --color-card-bg: rgba(30, 41, 59, 0.8);
     --color-card-border: rgba(71, 85, 105, 0.3);
@@ -378,7 +378,7 @@ body.dark-mode .jobportal-stat-icon {
 }
 
 /* Hero Sections - Slightly dimmed */
-body.dark-mode [style*="background: linear-gradient(135deg, #4facfe"],
+body.dark-mode [style*="background: linear-gradient(135deg, #00B4D8"],
 body.dark-mode [style*="background: linear-gradient(135deg, #667eea"] {
     filter: brightness(0.85);
 }

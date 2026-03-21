@@ -216,7 +216,7 @@ function jobportal_referral_dashboard_shortcode() {
     <div class="jobportal-referral-dashboard">
         <!-- Header -->
         <div style="
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
             padding: 60px 40px;
             border-radius: 20px;
             color: white;
@@ -243,7 +243,7 @@ function jobportal_referral_dashboard_shortcode() {
                 text-align: center;
             ">
                 <div style="font-size: 48px; margin-bottom: 12px;">⭐</div>
-                <div style="font-size: 42px; font-weight: 800; color: #4facfe; margin-bottom: 8px;">
+                <div style="font-size: 42px; font-weight: 800; color: #00B4D8; margin-bottom: 8px;">
                     <?php echo number_format($points); ?>
                 </div>
                 <div style="color: #64748b; font-weight: 600;">Total Points</div>
@@ -317,7 +317,7 @@ function jobportal_referral_dashboard_shortcode() {
                            border-radius: 12px;
                            font-size: 16px;
                            font-weight: 600;
-                           color: #4facfe;
+                           color: #00B4D8;
                        ">
                 <button type="button"
                         id="copy-referral-link"
@@ -365,7 +365,7 @@ function jobportal_referral_dashboard_shortcode() {
                     <div style="
                         width: 60px;
                         height: 60px;
-                        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
@@ -425,10 +425,10 @@ function jobportal_referral_dashboard_shortcode() {
                             You'll earn points for each action your referrals take:
                         </p>
                         <ul style="color: #64748b; line-height: 1.8; margin: 0; padding-left: 24px;">
-                            <li><strong style="color: #4facfe;">100 points</strong> - Friend signs up</li>
-                            <li><strong style="color: #4facfe;">50 points</strong> - Friend applies for a job</li>
-                            <li><strong style="color: #4facfe;">200 points</strong> - Friend posts a job</li>
-                            <li><strong style="color: #4facfe;">500 points</strong> - Friend purchases premium</li>
+                            <li><strong style="color: #00B4D8;">100 points</strong> - Friend signs up</li>
+                            <li><strong style="color: #00B4D8;">50 points</strong> - Friend applies for a job</li>
+                            <li><strong style="color: #00B4D8;">200 points</strong> - Friend posts a job</li>
+                            <li><strong style="color: #00B4D8;">500 points</strong> - Friend purchases premium</li>
                         </ul>
                     </div>
                 </div>
@@ -516,7 +516,7 @@ function jobportal_referral_dashboard_shortcode() {
                         <div style="
                             padding: 20px;
                             background: <?php echo $is_current_user ? 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' : '#f8fafc'; ?>;
-                            border: 2px solid <?php echo $is_current_user ? '#4facfe' : '#e5e7eb'; ?>;
+                            border: 2px solid <?php echo $is_current_user ? '#00B4D8' : '#e5e7eb'; ?>;
                             border-radius: 12px;
                             display: flex;
                             align-items: center;
@@ -525,7 +525,7 @@ function jobportal_referral_dashboard_shortcode() {
                             <div style="
                                 width: 48px;
                                 height: 48px;
-                                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                                background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                                 border-radius: 50%;
                                 display: flex;
                                 align-items: center;

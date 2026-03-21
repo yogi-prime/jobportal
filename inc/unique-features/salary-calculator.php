@@ -72,7 +72,7 @@ function jobportal_salary_calculator_shortcode() {
     .calc-form-input:focus,
     .calc-form-select:focus {
         outline: none;
-        border-color: #4facfe;
+        border-color: #00B4D8;
         box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
     }
 
@@ -97,7 +97,7 @@ function jobportal_salary_calculator_shortcode() {
     }
 
     .calc-skill-tag:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #f0f9ff;
     }
 
@@ -108,15 +108,15 @@ function jobportal_salary_calculator_shortcode() {
     }
 
     .calc-skill-tag.selected {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
-        border-color: #4facfe;
+        border-color: #00B4D8;
     }
 
     .calc-submit-btn {
         width: 100%;
         padding: 18px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         border: none;
         border-radius: 12px;
@@ -133,7 +133,7 @@ function jobportal_salary_calculator_shortcode() {
     }
 
     .salary-result {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         padding: 50px 40px;
         border-radius: 16px;
@@ -222,7 +222,7 @@ function jobportal_salary_calculator_shortcode() {
         padding: 20px;
         background: #f8fafc;
         border-radius: 10px;
-        border-left: 4px solid #4facfe;
+        border-left: 4px solid #00B4D8;
     }
 
     .tip-icon {
@@ -252,7 +252,7 @@ function jobportal_salary_calculator_shortcode() {
         <div class="salary-calc-card">
             <div class="salary-calc-header">
                 <h2 style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-                    <span style="color: #4facfe;"><?php echo jobportal_get_icon('dollar-sign', 32); ?></span>
+                    <span style="color: #00B4D8;"><?php echo jobportal_get_icon('dollar-sign', 32); ?></span>
                     Worldwide Salary Calculator
                 </h2>
                 <p>Calculate your market value based on role, location, experience, and skills</p>
@@ -593,7 +593,7 @@ function jobportal_salary_calculator_shortcode() {
 
             <div class="negotiation-tips">
                 <h3 style="display: flex; align-items: center; gap: 8px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #4facfe;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #00B4D8;">
                         <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
                     </svg>
                     Negotiation Tips

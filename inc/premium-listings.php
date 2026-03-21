@@ -313,14 +313,14 @@ function jobportal_pricing_packages_shortcode() {
         box-shadow: 0 12px 40px rgba(79, 172, 254, 0.2);
     }
     .jobportal-pricing-card.featured {
-        border: 3px solid #4facfe;
+        border: 3px solid #00B4D8;
     }
     .jobportal-pricing-card.featured::before {
         content: 'POPULAR';
         position: absolute;
         top: 20px;
         right: -35px;
-        background: #4facfe;
+        background: #00B4D8;
         color: white;
         padding: 6px 40px;
         font-size: 11px;

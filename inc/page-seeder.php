@@ -209,7 +209,7 @@ function jobportal_post_job_form_shortcode() {
                 <textarea name="job_requirements" rows="5" placeholder="One requirement per line" style="width: 100%; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px;"></textarea>
             </div>
 
-            <button type="submit" name="submit_job" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer;">
+            <button type="submit" name="submit_job" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer;">
                 Post Job
             </button>
         </form>

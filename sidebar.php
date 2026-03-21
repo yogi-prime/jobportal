@@ -95,7 +95,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-sidebar-inner .widget_search .search-form:focus-within {
-    border-color: #4facfe;
+    border-color: #00B4D8;
     box-shadow: 0 6px 20px rgba(79, 172, 254, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1);
     transform: translateY(-2px);
 }
@@ -162,7 +162,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-sidebar-inner .widget_search .search-submit:hover {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%) !important;
     box-shadow: 0 5px 18px rgba(79, 172, 254, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
     transform: translateY(-50%) translateY(-1px) scale(1.03) !important;
 }
@@ -210,7 +210,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-sidebar-inner a:hover {
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     padding-left: 4px !important;
 }
 
@@ -275,7 +275,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-recent-post-title:hover {
-    color: #4facfe !important;
+    color: #00B4D8 !important;
 }
 
 .jobportal-recent-post-date {
@@ -304,7 +304,7 @@ if (!is_active_sidebar('sidebar-main')) {
     padding: 8px !important;
     background: #f8fafc !important;
     border-radius: 6px !important;
-    border-left: 2px solid #4facfe !important;
+    border-left: 2px solid #00B4D8 !important;
     border-bottom: none !important;
     font-size: 12px !important;
     color: #64748b !important;
@@ -313,7 +313,7 @@ if (!is_active_sidebar('sidebar-main')) {
 
 .jobportal-sidebar-inner .widget_recent_comments a {
     display: inline !important;
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     font-weight: 600 !important;
     font-size: 12px !important;
 }
@@ -341,7 +341,7 @@ if (!is_active_sidebar('sidebar-main')) {
 .jobportal-sidebar-inner .widget_archive a:hover,
 .jobportal-sidebar-inner .widget_categories a:hover {
     background: #e0f2fe !important;
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     padding-left: 14px !important;
 }
 
@@ -362,7 +362,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-sidebar-inner a:hover .count {
-    background: #4facfe !important;
+    background: #00B4D8 !important;
     color: white !important;
 }
 
@@ -384,7 +384,7 @@ if (!is_active_sidebar('sidebar-main')) {
 }
 
 .jobportal-sidebar-inner .widget_tag_cloud a:hover {
-    background: #4facfe !important;
+    background: #00B4D8 !important;
     color: white !important;
     padding-left: 10px !important;
 }
@@ -419,13 +419,13 @@ if (!is_active_sidebar('sidebar-main')) {
 
 .jobportal-sidebar-inner .widget_calendar td a {
     display: block !important;
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     font-weight: 600 !important;
     padding: 2px !important;
 }
 
 .jobportal-sidebar-inner .widget_calendar td a:hover {
-    background: #4facfe !important;
+    background: #00B4D8 !important;
     color: white !important;
     border-radius: 3px !important;
 }
@@ -459,7 +459,7 @@ if (!is_active_sidebar('sidebar-main')) {
 
 .jobportal-sidebar-inner .widget_meta a:hover {
     background: #e0f2fe !important;
-    color: #4facfe !important;
+    color: #00B4D8 !important;
     padding-left: 14px !important;
 }
 

@@ -17,7 +17,7 @@ body {
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
@@ -43,7 +43,7 @@ body {
     width: 60px;
     height: 60px;
     background: rgba(79, 172, 254, 0.2);
-    border-color: #4facfe;
+    border-color: #00B4D8;
 }
 
 .jobportal-cursor-follower.hover {
@@ -56,7 +56,7 @@ body {
 .jobportal-cursor.click {
     width: 15px;
     height: 15px;
-    background: #4facfe;
+    background: #00B4D8;
 }
 
 /* Cursor on text */
@@ -65,7 +65,7 @@ body {
     height: 30px;
     border-radius: 0;
     border: none;
-    background: #4facfe;
+    background: #00B4D8;
 }
 
 /* Hide cursor on touch devices */
@@ -82,7 +82,7 @@ body {
 
 /* Dark mode cursor */
 body.dark-mode .jobportal-cursor {
-    border-color: #00f2fe;
+    border-color: #00C896;
 }
 
 body.dark-mode .jobportal-cursor-follower {
@@ -168,7 +168,7 @@ body.dark-mode .jobportal-glass-modal {
     background: white;
     border-radius: 16px;
     padding: 2px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 50%, #667eea 100%);
 }
 
 .jobportal-gradient-border-inner {
@@ -227,7 +227,7 @@ body.dark-mode .jobportal-gradient-border-inner {
    ============================================ */
 
 .jobportal-neon-text {
-    color: #4facfe;
+    color: #00B4D8;
     text-shadow:
         0 0 5px rgba(79, 172, 254, 0.5),
         0 0 10px rgba(79, 172, 254, 0.3),
@@ -242,7 +242,7 @@ body.dark-mode .jobportal-gradient-border-inner {
 }
 
 .jobportal-neon-border {
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
     box-shadow:
         0 0 5px rgba(79, 172, 254, 0.5),
         0 0 10px rgba(79, 172, 254, 0.3),
@@ -291,7 +291,7 @@ body.dark-mode .jobportal-gradient-border-inner {
    ============================================ */
 
 .jobportal-gradient-text {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 50%, #667eea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

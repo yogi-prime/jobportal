@@ -72,7 +72,7 @@ function jobportal_register_post_types() {
     // ===========================================
     // TESTIMONIALS POST TYPE
     // ===========================================
-    register_post_type('jobportal_testimonial', array(
+    register_post_type('testimonial', array(
         'labels' => array(
             'name'               => _x('Testimonials', 'post type general name', 'jobportal'),
             'singular_name'      => _x('Testimonial', 'post type singular name', 'jobportal'),
@@ -165,7 +165,7 @@ function jobportal_add_meta_boxes() {
         'jobportal_testimonial_details',
         __('Testimonial Details', 'jobportal'),
         'jobportal_testimonial_meta_box_callback',
-        'jobportal_testimonial',
+        'testimonial',
         'normal',
         'high'
     );
@@ -382,7 +382,7 @@ function jobportal_save_testimonial_meta($post_id) {
         }
     }
 }
-add_action('save_post_jobportal_testimonial', 'jobportal_save_testimonial_meta');
+add_action('save_post_testimonial', 'jobportal_save_testimonial_meta');
 
 /**
  * Save Pricing Meta Box
@@ -464,7 +464,7 @@ function jobportal_testimonial_columns($columns) {
     }
     return $new_columns;
 }
-add_filter('manage_jobportal_testimonial_posts_columns', 'jobportal_testimonial_columns');
+add_filter('manage_testimonial_posts_columns', 'jobportal_testimonial_columns');
 
 function jobportal_testimonial_column_content($column, $post_id) {
     switch ($column) {
@@ -480,7 +480,7 @@ function jobportal_testimonial_column_content($column, $post_id) {
             break;
     }
 }
-add_action('manage_jobportal_testimonial_posts_custom_column', 'jobportal_testimonial_column_content', 10, 2);
+add_action('manage_testimonial_posts_custom_column', 'jobportal_testimonial_column_content', 10, 2);
 
 /**
  * Add admin columns for Pricing

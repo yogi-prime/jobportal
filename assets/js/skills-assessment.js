@@ -100,7 +100,7 @@
                     align-items: center;
                     padding: 20px 24px;
                     background: ${isSelected ? '#eff6ff' : '#f8fafc'};
-                    border: 2px solid ${isSelected ? '#4facfe' : '#e2e8f0'};
+                    border: 2px solid ${isSelected ? '#00B4D8' : '#e2e8f0'};
                     border-radius: 12px;
                     cursor: pointer;
                     transition: all 0.3s;
@@ -139,7 +139,7 @@
 
                 this.closest('.quiz-option').classList.add('selected');
                 this.closest('.quiz-option').style.background = '#eff6ff';
-                this.closest('.quiz-option').style.borderColor = '#4facfe';
+                this.closest('.quiz-option').style.borderColor = '#00B4D8';
             });
         });
 

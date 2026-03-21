@@ -13,7 +13,7 @@ $sidebar = get_theme_mod('jobportal_blog_sidebar', 'right');
 <style>
 /* Universal Hero - Same as Blog Page */
 .jobportal-page-hero-small {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     padding: 140px 0 50px;
     position: relative;
     overflow: hidden;

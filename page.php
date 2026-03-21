@@ -11,7 +11,7 @@ get_header();
 <style>
 /* Universal Hero - Consistent Across All Pages */
 .jobportal-page-hero-default {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     padding: 140px 0 50px;
     position: relative;
     overflow: hidden;

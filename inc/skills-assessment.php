@@ -710,7 +710,7 @@ function jobportal_display_skill_badges($user_id) {
 
         $html .= '<div style="
             padding: 8px 16px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
             color: white;
             border-radius: 20px;
             font-weight: 600;
@@ -800,7 +800,7 @@ function jobportal_user_skills_dashboard_shortcode() {
                 <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
                     <table style="width: 100%; border-collapse: collapse;">
                         <thead>
-                            <tr style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <tr style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);">
                                 <th style="padding: 16px; text-align: left; color: white; font-weight: 700;">Skill</th>
                                 <th style="padding: 16px; text-align: left; color: white; font-weight: 700;">Score</th>
                                 <th style="padding: 16px; text-align: left; color: white; font-weight: 700;">Status</th>
@@ -837,7 +837,7 @@ function jobportal_user_skills_dashboard_shortcode() {
                                     <td style="padding: 16px;">
                                         <?php if ($result['passed'] && $result['certificate_id']) : ?>
                                             <a href="<?php echo home_url('/certificate?id=' . $result['certificate_id']); ?>"
-                                               style="color: #4facfe; font-weight: 600; text-decoration: none;"
+                                               style="color: #00B4D8; font-weight: 600; text-decoration: none;"
                                                target="_blank">
                                                 View Certificate
                                             </a>

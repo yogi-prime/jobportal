@@ -52,7 +52,7 @@
 
 .jobportal-modal-header {
     padding: 32px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     border-radius: 20px 20px 0 0;
     color: white;
     position: relative;
@@ -133,7 +133,7 @@
 .jobportal-form-row textarea:focus,
 .jobportal-form-row select:focus {
     outline: none;
-    border-color: #4facfe;
+    border-color: #00B4D8;
     box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
 }
 
@@ -154,7 +154,7 @@
 }
 
 .jobportal-file-upload:hover {
-    border-color: #4facfe;
+    border-color: #00B4D8;
     background: #f0f9ff;
 }
 
@@ -206,7 +206,7 @@
 .jobportal-submit-btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     color: white;
     border: none;
     border-radius: 10px;

@@ -46,7 +46,7 @@ while (have_posts()) : the_post();
 
     <!-- Company Hero Section -->
     <div style="
-        background: <?php echo $banner ? 'url(' . esc_url($banner) . ') center/cover' : 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'; ?>;
+        background: <?php echo $banner ? 'url(' . esc_url($banner) . ') center/cover' : 'linear-gradient(135deg, #00B4D8 0%, #00C896 100%)'; ?>;
         padding: 80px 20px;
         position: relative;
         color: white;
@@ -82,7 +82,7 @@ while (have_posts()) : the_post();
                         justify-content: center;
                         font-size: 72px;
                         font-weight: 800;
-                        color: #4facfe;
+                        color: #00B4D8;
                         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
                     ">
                         <?php echo substr(get_the_title(), 0, 1); ?>
@@ -138,7 +138,7 @@ while (have_posts()) : the_post();
                                style="
                                    padding: 14px 28px;
                                    background: white;
-                                   color: #4facfe;
+                                   color: #00B4D8;
                                    border-radius: 12px;
                                    font-weight: 700;
                                    text-decoration: none;

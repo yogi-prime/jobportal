@@ -13,7 +13,7 @@ get_header();
 <div class="jobportal-homepage">
 
 <!-- Hero Section -->
-<section class="jp-hero" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 100px 20px; text-align: center;">
+<section class="jp-hero" style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; padding: 100px 20px; text-align: center;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h1 style="font-size: 56px; margin-bottom: 20px; font-weight: 800;">Find Your Dream Job Today</h1>
         <p style="font-size: 22px; margin-bottom: 50px; opacity: 0.95;">Discover thousands of job opportunities from top companies worldwide</p>
@@ -22,7 +22,7 @@ get_header();
         <form action="<?php echo esc_url(home_url('/jobs')); ?>" method="get" style="max-width: 900px; margin: 0 auto 40px; display: flex; gap: 12px; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
             <input type="text" name="s" placeholder="Job title, keywords, or company..." style="flex: 1; padding: 16px 20px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 16px;">
             <input type="text" name="location" placeholder="City or remote..." style="flex: 1; padding: 16px 20px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 16px;">
-            <button type="submit" style="padding: 16px 40px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; white-space: nowrap;">Search Jobs</button>
+            <button type="submit" style="padding: 16px 40px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; white-space: nowrap;">Search Jobs</button>
         </form>
 
         <!-- Quick Links -->
@@ -65,7 +65,7 @@ get_header();
             );
             foreach ($categories as $cat) : ?>
                 <a href="#" style="background: #f8fafc; padding: 32px 24px; border-radius: 12px; text-align: center; text-decoration: none; border: 2px solid #e2e8f0; transition: all 0.3s;">
-                    <div style="color: #4facfe; margin-bottom: 12px; display: flex; justify-content: center;"><?php echo jobportal_get_icon($cat['icon'], 48); ?></div>
+                    <div style="color: #00B4D8; margin-bottom: 12px; display: flex; justify-content: center;"><?php echo jobportal_get_icon($cat['icon'], 48); ?></div>
                     <h3 style="font-size: 18px; margin-bottom: 8px; color: #1e293b; font-weight: 700;"><?php echo esc_html($cat['name']); ?></h3>
                     <div style="color: #64748b; font-size: 14px;"><?php echo esc_html($cat['jobs']); ?> jobs</div>
                 </a>
@@ -113,13 +113,13 @@ get_header();
                     <div style="display: flex; gap: 8px; margin-bottom: 16px;">
                         <span style="padding: 4px 12px; background: #e0f2fe; color: #0369a1; border-radius: 6px; font-size: 13px; font-weight: 600;"><?php echo esc_html($job['type']); ?></span>
                     </div>
-                    <a href="<?php echo esc_url(home_url('/job/' . sanitize_title($job['title']))); ?>" style="display: block; text-align: center; padding: 12px; background: #4facfe; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Apply Now</a>
+                    <a href="<?php echo esc_url(home_url('/job/' . sanitize_title($job['title']))); ?>" style="display: block; text-align: center; padding: 12px; background: #00B4D8; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Apply Now</a>
                 </div>
             <?php endforeach; ?>
         </div>
 
         <div style="text-align: center;">
-            <a href="<?php echo esc_url(home_url('/jobs')); ?>" style="display: inline-block; padding: 14px 40px; background: #4facfe; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px;">View All 10,245 Jobs →</a>
+            <a href="<?php echo esc_url(home_url('/jobs')); ?>" style="display: inline-block; padding: 14px 40px; background: #00B4D8; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px;">View All 10,245 Jobs →</a>
         </div>
     </div>
 </section>
@@ -135,7 +135,7 @@ get_header();
             $companies = array('Google', 'Microsoft', 'Amazon', 'Meta', 'Apple', 'Netflix', 'Tesla', 'Spotify', 'Airbnb', 'Uber');
             foreach ($companies as $company) : ?>
                 <a href="#" style="background: #f8fafc; padding: 40px 20px; border-radius: 12px; text-align: center; border: 2px solid #e2e8f0; text-decoration: none; transition: all 0.3s;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; color: white;"><?php echo substr($company, 0, 1); ?></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; color: white;"><?php echo substr($company, 0, 1); ?></div>
                     <h4 style="font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 4px;"><?php echo esc_html($company); ?></h4>
                     <div style="color: #64748b; font-size: 13px;"><?php echo rand(10, 50); ?> open jobs</div>
                 </a>
@@ -152,17 +152,17 @@ get_header();
 
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">1</div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">1</div>
                 <h3 style="font-size: 24px; margin-bottom: 12px; font-weight: 700;">Create Your Profile</h3>
                 <p style="color: #64748b; line-height: 1.7;">Build your professional profile and upload your resume. Use our Resume Builder for a stunning CV.</p>
             </div>
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">2</div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">2</div>
                 <h3 style="font-size: 24px; margin-bottom: 12px; font-weight: 700;">Search & Apply</h3>
                 <p style="color: #64748b; line-height: 1.7;">Browse thousands of jobs, get personalized matches, and apply with one click.</p>
             </div>
             <div style="text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">3</div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">3</div>
                 <h3 style="font-size: 24px; margin-bottom: 12px; font-weight: 700;">Get Hired</h3>
                 <p style="color: #64748b; line-height: 1.7;">Schedule interviews with our Interview Scheduler and land your dream job!</p>
             </div>
@@ -177,17 +177,17 @@ get_header();
         <p style="text-align: center; color: #64748b; margin-bottom: 48px; font-size: 18px;">Powerful tools to accelerate your job search</p>
 
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
-            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 40px; border-radius: 16px; text-align: center; color: white;">
+            <div style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); padding: 40px; border-radius: 16px; text-align: center; color: white;">
                 <div style="margin-bottom: 20px; display: flex; justify-content: center; opacity: 0.95;"><?php echo jobportal_get_icon('file-text', 64); ?></div>
                 <h3 style="font-size: 26px; margin-bottom: 16px; font-weight: 800;">Resume Builder</h3>
                 <p style="margin-bottom: 24px; opacity: 0.95; line-height: 1.6;">Drag-and-drop resume builder with live preview. Create professional resumes in minutes.</p>
-                <a href="<?php echo esc_url(home_url('/resume-builder')); ?>" style="display: inline-block; padding: 12px 32px; background: white; color: #4facfe; text-decoration: none; border-radius: 8px; font-weight: 700;">Build Resume →</a>
+                <a href="<?php echo esc_url(home_url('/resume-builder')); ?>" style="display: inline-block; padding: 12px 32px; background: white; color: #00B4D8; text-decoration: none; border-radius: 8px; font-weight: 700;">Build Resume →</a>
             </div>
-            <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 40px; border-radius: 16px; text-align: center; color: white;">
+            <div style="background: linear-gradient(135deg, #00C896 0%, #38f9d7 100%); padding: 40px; border-radius: 16px; text-align: center; color: white;">
                 <div style="margin-bottom: 20px; display: flex; justify-content: center; opacity: 0.95;"><?php echo jobportal_get_icon('target', 64); ?></div>
                 <h3 style="font-size: 26px; margin-bottom: 16px; font-weight: 800;">Job Matcher</h3>
                 <p style="margin-bottom: 24px; opacity: 0.95; line-height: 1.6;">AI-powered job matching algorithm. Take a 4-question quiz for personalized recommendations.</p>
-                <a href="<?php echo esc_url(home_url('/job-matcher')); ?>" style="display: inline-block; padding: 12px 32px; background: white; color: #43e97b; text-decoration: none; border-radius: 8px; font-weight: 700;">Find Match →</a>
+                <a href="<?php echo esc_url(home_url('/job-matcher')); ?>" style="display: inline-block; padding: 12px 32px; background: white; color: #00C896; text-decoration: none; border-radius: 8px; font-weight: 700;">Find Match →</a>
             </div>
             <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 40px; border-radius: 16px; text-align: center; color: white;">
                 <div style="margin-bottom: 20px; display: flex; justify-content: center; opacity: 0.95;"><?php echo jobportal_get_icon('dollar-sign', 64); ?></div>
@@ -235,7 +235,7 @@ get_header();
                     <div style="color: #fbbf24; font-size: 24px; margin-bottom: 16px;">★★★★★</div>
                     <p style="color: #475569; line-height: 1.7; margin-bottom: 20px; font-size: 15px;">"<?php echo esc_html($test['text']); ?>"</p>
                     <div style="display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: white;"><?php echo substr($test['name'], 0, 1); ?></div>
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: white;"><?php echo substr($test['name'], 0, 1); ?></div>
                         <div>
                             <div style="font-weight: 700; color: #1e293b;"><?php echo esc_html($test['name']); ?></div>
                             <div style="font-size: 13px; color: #64748b;"><?php echo esc_html($test['role']); ?></div>
@@ -271,7 +271,7 @@ get_header();
             );
             foreach ($locations as $loc) : ?>
                 <a href="#" style="background: #f8fafc; padding: 20px 16px; border-radius: 10px; text-align: center; text-decoration: none; border: 2px solid #e2e8f0; transition: all 0.3s;">
-                    <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: center;"><?php echo jobportal_get_icon('map-pin', 28); ?></div>
+                    <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: center;"><?php echo jobportal_get_icon('map-pin', 28); ?></div>
                     <h4 style="font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 4px;"><?php echo esc_html($loc['city']); ?></h4>
                     <div style="color: #64748b; font-size: 12px;"><?php echo esc_html($loc['jobs']); ?> jobs</div>
                 </a>
@@ -281,7 +281,7 @@ get_header();
 </section>
 
 <!-- Newsletter -->
-<section style="padding: 80px 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+<section style="padding: 80px 20px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white;">
     <div style="max-width: 800px; margin: 0 auto; text-align: center;">
         <h2 style="font-size: 40px; margin-bottom: 16px; font-weight: 800;">Never Miss an Opportunity</h2>
         <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.95;">Subscribe to get weekly job alerts, career tips, and exclusive opportunities</p>
@@ -302,8 +302,8 @@ get_header();
         <p style="color: #64748b; margin-bottom: 40px; font-size: 18px;">Post jobs, track applications, and find the perfect candidates with our ATS</p>
 
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="<?php echo esc_url(home_url('/post-job')); ?>" style="padding: 16px 40px; background: #4facfe; color: white; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px;">Post a Job</a>
-            <a href="<?php echo esc_url(home_url('/ats-dashboard')); ?>" style="padding: 16px 40px; background: transparent; color: #4facfe; border: 2px solid #4facfe; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px;">Access ATS Dashboard</a>
+            <a href="<?php echo esc_url(home_url('/post-job')); ?>" style="padding: 16px 40px; background: #00B4D8; color: white; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px;">Post a Job</a>
+            <a href="<?php echo esc_url(home_url('/ats-dashboard')); ?>" style="padding: 16px 40px; background: transparent; color: #00B4D8; border: 2px solid #00B4D8; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 16px;">Access ATS Dashboard</a>
         </div>
     </div>
 </section>

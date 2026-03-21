@@ -39,7 +39,7 @@
     justify-content: center;
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     color: white;
     font-weight: 800;
     font-size: 24px;
@@ -79,7 +79,7 @@
 }
 
 .jobportal-steps-list li.active {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     color: white;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .jobportal-welcome-icon svg {
-    color: #4facfe;
+    color: #00B4D8;
 }
 
 .jobportal-welcome-desc {
@@ -208,7 +208,7 @@
     align-items: center;
     gap: 8px;
     padding: 14px 28px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -266,18 +266,18 @@
     gap: 8px;
     padding: 12px 24px;
     background: transparent;
-    color: #4facfe;
+    color: #00B4D8;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .jobportal-btn-outline:hover {
-    background: #4facfe;
+    background: #00B4D8;
     color: white;
 }
 
@@ -318,7 +318,7 @@
 }
 
 .jobportal-plugin-item.installing {
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
 }
 
 .jobportal-plugin-item.installed {
@@ -349,8 +349,8 @@
 }
 
 .jobportal-plugin-checkbox input:checked + .checkmark {
-    background: #4facfe;
-    border-color: #4facfe;
+    background: #00B4D8;
+    border-color: #00B4D8;
 }
 
 .jobportal-plugin-checkbox input:checked + .checkmark::after {
@@ -416,7 +416,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -494,8 +494,8 @@
 }
 
 .jobportal-page-checkbox input:checked + .checkmark {
-    background: #4facfe;
-    border-color: #4facfe;
+    background: #00B4D8;
+    border-color: #00B4D8;
 }
 
 .jobportal-page-checkbox input:checked + .checkmark::after {
@@ -547,7 +547,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 2px solid #4facfe;
+    border: 2px solid #00B4D8;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -594,11 +594,11 @@
 }
 
 .jobportal-demo-item:hover {
-    border-color: #4facfe;
+    border-color: #00B4D8;
 }
 
 .jobportal-demo-item.active {
-    border-color: #4facfe;
+    border-color: #00B4D8;
     background: #f5f3ff;
 }
 
@@ -613,7 +613,7 @@
 }
 
 .demo-preview-img svg {
-    color: #4facfe;
+    color: #00B4D8;
 }
 
 .demo-preview h4 {
@@ -676,7 +676,7 @@
 .progress-fill {
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(90deg, #00B4D8 0%, #00C896 100%);
     border-radius: 50px;
     transition: width 0.3s ease;
 }
@@ -742,7 +742,7 @@
 }
 
 .next-icon svg {
-    color: #4facfe;
+    color: #00B4D8;
 }
 
 .next-text {
@@ -764,7 +764,7 @@
 
 /* Support Box */
 .jobportal-support-box {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     border-radius: 16px;
     padding: 32px;
     color: white;
@@ -790,7 +790,7 @@
 
 .jobportal-support-box .jobportal-btn-secondary {
     background: white;
-    color: #4facfe;
+    color: #00B4D8;
 }
 
 .jobportal-support-box .jobportal-btn-secondary:hover {
@@ -804,12 +804,12 @@
 
 .jobportal-support-box .jobportal-btn-outline:hover {
     background: white;
-    color: #4facfe;
+    color: #00B4D8;
 }
 
 /* Notice Styling */
 .jobportal-setup-notice {
-    border-left-color: #4facfe !important;
+    border-left-color: #00B4D8 !important;
 }
 
 /* Responsive */

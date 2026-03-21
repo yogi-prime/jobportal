@@ -14,7 +14,7 @@ get_header();
 <div class="jobportal-single-job">
 
 <!-- Job Header -->
-<section style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 60px 20px;">
+<section style="background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); color: white; padding: 60px 20px;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <div style="display: flex; justify-content: space-between; align-items: start; gap: 24px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px;">
@@ -29,7 +29,7 @@ get_header();
             </div>
             <div style="display: flex; gap: 12px; align-items: center;">
                 <button style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border: 2px solid white; border-radius: 10px; color: white; font-size: 20px; cursor: pointer;">♡</button>
-                <button style="padding: 16px 40px; background: white; color: #4facfe; border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer;">Apply Now</button>
+                <button style="padding: 16px 40px; background: white; color: #00B4D8; border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer;">Apply Now</button>
             </div>
         </div>
     </div>
@@ -94,32 +94,32 @@ get_header();
                 <h2 style="font-size: 28px; margin-bottom: 20px; color: #1e293b;">Benefits & Perks</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('heart', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('heart', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">Health Insurance</div>
                         <div style="font-size: 14px; color: #64748b;">Medical, Dental, Vision</div>
                     </div>
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('home', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('home', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">Remote Work</div>
                         <div style="font-size: 14px; color: #64748b;">Work from anywhere</div>
                     </div>
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('book', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('book', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">Learning Budget</div>
                         <div style="font-size: 14px; color: #64748b;">$2,000/year for courses</div>
                     </div>
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('sun', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('sun', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">Unlimited PTO</div>
                         <div style="font-size: 14px; color: #64748b;">Take time when you need</div>
                     </div>
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('dollar-sign', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('dollar-sign', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">401(k) Match</div>
                         <div style="font-size: 14px; color: #64748b;">Up to 5% matching</div>
                     </div>
                     <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
-                        <div style="color: #4facfe; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('gamepad', 24); ?></div>
+                        <div style="color: #00B4D8; margin-bottom: 8px; display: flex; justify-content: flex-start;"><?php echo jobportal_get_icon('gamepad', 24); ?></div>
                         <div style="font-weight: 600; color: #1e293b;">Team Events</div>
                         <div style="font-size: 14px; color: #64748b;">Quarterly offsites</div>
                     </div>
@@ -132,7 +132,7 @@ get_header();
             <!-- Apply Card -->
             <div style="background: white; padding: 32px; border-radius: 12px; margin-bottom: 24px; border: 2px solid #e2e8f0; position: sticky; top: 20px;">
                 <h3 style="font-size: 22px; margin-bottom: 20px; color: #1e293b;">Apply for this Job</h3>
-                <button style="width: 100%; padding: 16px; background: #4facfe; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 12px;">Apply Now</button>
+                <button style="width: 100%; padding: 16px; background: #00B4D8; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 12px;">Apply Now</button>
                 <button style="width: 100%; padding: 16px; background: #f8fafc; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Save for Later</button>
 
                 <div style="margin-top: 24px; padding-top: 24px; border-top: 2px solid #e2e8f0;">
@@ -148,13 +148,13 @@ get_header();
             <!-- Company Info -->
             <div style="background: white; padding: 32px; border-radius: 12px; border: 2px solid #e2e8f0;">
                 <h3 style="font-size: 22px; margin-bottom: 20px; color: #1e293b;">About TechCorp Inc.</h3>
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">TC</div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: white;">TC</div>
                 <p style="color: #475569; line-height: 1.7; font-size: 15px; margin-bottom: 16px;">TechCorp is a leading technology company building innovative solutions for modern businesses. We're passionate about creating products that make a difference.</p>
                 <div style="font-size: 14px; color: #64748b; line-height: 2;">
                     <div style="display: flex; align-items: center; gap: 8px;"><?php echo jobportal_get_icon('building', 16); ?> <strong>Industry:</strong> Technology</div>
                     <div style="display: flex; align-items: center; gap: 8px;"><?php echo jobportal_get_icon('users', 16); ?> <strong>Company Size:</strong> 500-1000</div>
                     <div style="display: flex; align-items: center; gap: 8px;"><?php echo jobportal_get_icon('map-pin', 16); ?> <strong>HQ:</strong> San Francisco, CA</div>
-                    <div style="display: flex; align-items: center; gap: 8px;"><?php echo jobportal_get_icon('globe', 16); ?> <strong>Website:</strong> <a href="#" style="color: #4facfe;">techcorp.com</a></div>
+                    <div style="display: flex; align-items: center; gap: 8px;"><?php echo jobportal_get_icon('globe', 16); ?> <strong>Website:</strong> <a href="#" style="color: #00B4D8;">techcorp.com</a></div>
                 </div>
                 <a href="#" style="display: block; margin-top: 20px; padding: 12px; text-align: center; background: #f8fafc; color: #1e293b; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid #e2e8f0;">View All Jobs</a>
             </div>
@@ -176,7 +176,7 @@ get_header();
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('map-pin', 14); ?> Remote</span>
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('dollar-sign', 14); ?> $100K - $140K</span>
                 </div>
-                <a href="#" style="display: inline-block; padding: 10px 24px; background: #4facfe; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
+                <a href="#" style="display: inline-block; padding: 10px 24px; background: #00B4D8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
             </div>
 
             <div style="background: white; padding: 28px; border-radius: 12px; border: 2px solid #e2e8f0;">
@@ -186,7 +186,7 @@ get_header();
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('map-pin', 14); ?> New York, NY</span>
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('dollar-sign', 14); ?> $110K - $150K</span>
                 </div>
-                <a href="#" style="display: inline-block; padding: 10px 24px; background: #4facfe; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
+                <a href="#" style="display: inline-block; padding: 10px 24px; background: #00B4D8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
             </div>
 
             <div style="background: white; padding: 28px; border-radius: 12px; border: 2px solid #e2e8f0;">
@@ -196,7 +196,7 @@ get_header();
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('map-pin', 14); ?> Austin, TX</span>
                     <span style="display: flex; align-items: center; gap: 6px;"><?php echo jobportal_get_icon('dollar-sign', 14); ?> $130K - $170K</span>
                 </div>
-                <a href="#" style="display: inline-block; padding: 10px 24px; background: #4facfe; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
+                <a href="#" style="display: inline-block; padding: 10px 24px; background: #00B4D8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Job</a>
             </div>
 
         </div>

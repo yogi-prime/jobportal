@@ -208,35 +208,35 @@ function jobportal_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('jobportal_primary_color', array(
-        'default'           => '#4facfe',
+        'default'           => '#00B4D8', // Cyan - Career Hub brand color
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'jobportal_primary_color', array(
-        'label'   => __('Primary Color', 'jobportal'),
+        'label'   => __('Primary Color (Cyan)', 'jobportal'),
         'section' => 'jobportal_primary_colors',
     )));
 
     $wp_customize->add_setting('jobportal_secondary_color', array(
-        'default'           => '#00f2fe',
+        'default'           => '#00C896', // Teal Green - Career Hub accent
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'jobportal_secondary_color', array(
-        'label'   => __('Secondary Color', 'jobportal'),
+        'label'   => __('Secondary Color (Teal)', 'jobportal'),
         'section' => 'jobportal_primary_colors',
     )));
 
     $wp_customize->add_setting('jobportal_accent_color', array(
-        'default'           => '#43e97b',
+        'default'           => '#1B3A5F', // Navy Blue - Career Hub dark
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'jobportal_accent_color', array(
-        'label'   => __('Accent Color', 'jobportal'),
+        'label'   => __('Accent Color (Navy)', 'jobportal'),
         'section' => 'jobportal_primary_colors',
     )));
 
@@ -248,7 +248,7 @@ function jobportal_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('jobportal_heading_color', array(
-        'default'           => '#0f172a',
+        'default'           => '#1B3A5F', // Navy Blue for headings
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ));
@@ -820,9 +820,9 @@ function jobportal_sanitize_select($input, $setting) {
  * Output Customizer CSS
  */
 function jobportal_customizer_css() {
-    $primary_color   = get_theme_mod('jobportal_primary_color', '#4facfe');
-    $secondary_color = get_theme_mod('jobportal_secondary_color', '#00f2fe');
-    $accent_color    = get_theme_mod('jobportal_accent_color', '#43e97b');
+    $primary_color   = get_theme_mod('jobportal_primary_color', '#00B4D8');
+    $secondary_color = get_theme_mod('jobportal_secondary_color', '#00C896');
+    $accent_color    = get_theme_mod('jobportal_accent_color', '#00C896');
     $heading_color   = get_theme_mod('jobportal_heading_color', '#0f172a');
     $body_color      = get_theme_mod('jobportal_body_color', '#475569');
     $header_bg       = get_theme_mod('jobportal_header_bg_color', '#ffffff');

@@ -106,9 +106,9 @@
 
             comparisonList.push(jobId);
             btn.classList.add('active');
-            btn.style.background = '#4facfe';
+            btn.style.background = '#00B4D8';
             btn.style.color = 'white';
-            btn.style.borderColor = '#4facfe';
+            btn.style.borderColor = '#00B4D8';
         }
 
         updateComparisonBadge();
@@ -125,7 +125,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
             color: white;
             padding: 16px 24px;
             border-radius: 50px;
@@ -200,7 +200,7 @@
 
         modal.innerHTML = `
             <div style="background: white; border-radius: 20px; max-width: 1200px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative;">
-                <div style="position: sticky; top: 0; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 24px; border-radius: 20px 20px 0 0; z-index: 10;">
+                <div style="position: sticky; top: 0; background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%); padding: 24px; border-radius: 20px 20px 0 0; z-index: 10;">
                     <button class="close-comparison-modal" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border: none; border-radius: 50%; color: white; font-size: 24px; cursor: pointer;">×</button>
                     <h2 style="color: white; font-size: 28px; font-weight: 800; margin: 0;">Job Comparison</h2>
                     <p style="color: rgba(255, 255, 255, 0.9); margin: 8px 0 0;">Compare ${comparisonList.length} jobs side by side</p>
@@ -329,9 +329,9 @@
                 const btn = document.querySelector(`.jobportal-compare-btn[data-job-id="${jobId}"]`);
                 if (btn) {
                     btn.classList.add('active');
-                    btn.style.background = '#4facfe';
+                    btn.style.background = '#00B4D8';
                     btn.style.color = 'white';
-                    btn.style.borderColor = '#4facfe';
+                    btn.style.borderColor = '#00B4D8';
                 }
             });
         }

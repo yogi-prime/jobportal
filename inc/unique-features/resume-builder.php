@@ -33,7 +33,7 @@ function jobportal_resume_builder_shortcode() {
         color: #1e293b;
         margin-bottom: 16px;
         font-weight: 800;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -72,7 +72,7 @@ function jobportal_resume_builder_shortcode() {
     }
 
     .builder-form::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         border-radius: 10px;
     }
 
@@ -106,14 +106,14 @@ function jobportal_resume_builder_shortcode() {
     }
 
     .template-option:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #f0f9ff;
         transform: translateY(-2px);
     }
 
     .template-option.active {
-        border-color: #4facfe;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-color: #00B4D8;
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
     }
 
@@ -195,7 +195,7 @@ function jobportal_resume_builder_shortcode() {
     .form-textarea:focus,
     .form-select:focus {
         outline: none;
-        border-color: #4facfe;
+        border-color: #00B4D8;
         box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
     }
 
@@ -212,7 +212,7 @@ function jobportal_resume_builder_shortcode() {
 
     .btn-add-item {
         padding: 12px 20px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
         color: white;
         border: none;
         border-radius: 10px;
@@ -282,7 +282,7 @@ function jobportal_resume_builder_shortcode() {
     .btn-export {
         width: 100%;
         padding: 18px;
-        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        background: linear-gradient(135deg, #00C896 0%, #38f9d7 100%);
         color: white;
         border: none;
         border-radius: 12px;
@@ -337,7 +337,7 @@ function jobportal_resume_builder_shortcode() {
     }
 
     .zoom-btn:hover {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         background: #f0f9ff;
     }
 
@@ -356,7 +356,7 @@ function jobportal_resume_builder_shortcode() {
     .resume-modern .resume-header {
         text-align: center;
         padding-bottom: 30px;
-        border-bottom: 3px solid #4facfe;
+        border-bottom: 3px solid #00B4D8;
         margin-bottom: 40px;
     }
 
@@ -369,7 +369,7 @@ function jobportal_resume_builder_shortcode() {
 
     .resume-modern .resume-title {
         font-size: 20px;
-        color: #4facfe;
+        color: #00B4D8;
         font-weight: 600;
         margin-bottom: 16px;
     }
@@ -408,7 +408,7 @@ function jobportal_resume_builder_shortcode() {
 
     .resume-modern .company {
         font-size: 16px;
-        color: #4facfe;
+        color: #00B4D8;
         font-weight: 600;
         margin-top: 4px;
     }
@@ -560,7 +560,7 @@ function jobportal_resume_builder_shortcode() {
     .resume-tech .resume-name {
         font-size: 44px;
         font-weight: 800;
-        color: #4facfe;
+        color: #00B4D8;
         margin-bottom: 12px;
         font-family: 'Courier New', monospace;
     }
@@ -568,14 +568,14 @@ function jobportal_resume_builder_shortcode() {
     .resume-tech .section-title {
         font-size: 20px;
         font-weight: 800;
-        color: #4facfe;
+        color: #00B4D8;
         margin-bottom: 20px;
         font-family: 'Courier New', monospace;
     }
 
     .resume-tech .section-title::before {
         content: '> ';
-        color: #43e97b;
+        color: #00C896;
     }
 
     /* Template 6: Executive */
@@ -603,7 +603,7 @@ function jobportal_resume_builder_shortcode() {
         color: #1e293b;
         margin-bottom: 24px;
         padding-bottom: 12px;
-        border-bottom: 3px solid #4facfe;
+        border-bottom: 3px solid #00B4D8;
     }
 
     /* Template 7: Designer */
@@ -688,7 +688,7 @@ function jobportal_resume_builder_shortcode() {
 
     /* Template 10: International */
     .resume-international {
-        border: 3px solid #4facfe;
+        border: 3px solid #00B4D8;
         padding: 50px;
     }
 
@@ -697,7 +697,7 @@ function jobportal_resume_builder_shortcode() {
         justify-content: space-between;
         align-items: start;
         padding-bottom: 30px;
-        border-bottom: 3px solid #4facfe;
+        border-bottom: 3px solid #00B4D8;
         margin-bottom: 30px;
     }
 
@@ -711,10 +711,10 @@ function jobportal_resume_builder_shortcode() {
     .resume-international .section-title {
         font-size: 22px;
         font-weight: 800;
-        color: #4facfe;
+        color: #00B4D8;
         margin-bottom: 20px;
         padding-left: 20px;
-        border-left: 5px solid #4facfe;
+        border-left: 5px solid #00B4D8;
     }
 
     /* Responsive */
@@ -733,7 +733,7 @@ function jobportal_resume_builder_shortcode() {
     <div class="resume-builder-wrapper">
         <div class="builder-header">
             <h2 style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-                <span style="color: #4facfe;"><?php echo jobportal_get_icon('file-text', 32); ?></span>
+                <span style="color: #00B4D8;"><?php echo jobportal_get_icon('file-text', 32); ?></span>
                 Professional Resume Builder
             </h2>
             <p>Create stunning resumes in minutes • 10 Professional Templates • ATS-Optimized • Live Preview</p>

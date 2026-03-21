@@ -61,7 +61,7 @@ function jobportal_login_modal() {
                             <input type="checkbox" name="remember" style="width: auto;">
                             Remember me
                         </label>
-                        <a href="<?php echo wp_lostpassword_url(); ?>" style="color: #4facfe; text-decoration: none; font-size: 14px; font-weight: 600;">
+                        <a href="<?php echo wp_lostpassword_url(); ?>" style="color: #00B4D8; text-decoration: none; font-size: 14px; font-weight: 600;">
                             Forgot Password?
                         </a>
                     </div>
@@ -78,7 +78,7 @@ function jobportal_login_modal() {
 
                 <p style="text-align: center; margin-top: 20px; color: #64748b; font-size: 14px;">
                     Don't have an account?
-                    <button class="switch-modal-tab" data-tab="register" style="background: none; border: none; color: #4facfe; font-weight: 700; cursor: pointer;">
+                    <button class="switch-modal-tab" data-tab="register" style="background: none; border: none; color: #00B4D8; font-weight: 700; cursor: pointer;">
                         Register Now
                     </button>
                 </p>
@@ -152,7 +152,7 @@ function jobportal_login_modal() {
 
                 <p style="text-align: center; margin-top: 20px; color: #64748b; font-size: 14px;">
                     Already have an account?
-                    <button class="switch-modal-tab" data-tab="login" style="background: none; border: none; color: #4facfe; font-weight: 700; cursor: pointer;">
+                    <button class="switch-modal-tab" data-tab="login" style="background: none; border: none; color: #00B4D8; font-weight: 700; cursor: pointer;">
                         Sign In
                     </button>
                 </p>
@@ -250,7 +250,7 @@ function jobportal_login_modal() {
 
     .jobportal-modal-tab.active {
         background: white;
-        color: #4facfe;
+        color: #00B4D8;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -287,18 +287,18 @@ function jobportal_login_modal() {
     }
 
     .jobportal-modal .form-group input:focus {
-        border-color: #4facfe;
+        border-color: #00B4D8;
         outline: none;
         box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
     }
 
     .user-type-option input:checked ~ * {
-        color: #4facfe !important;
+        color: #00B4D8 !important;
     }
 
     .user-type-option:has(input:checked) {
         background: #eff6ff;
-        border-color: #4facfe !important;
+        border-color: #00B4D8 !important;
     }
 
     .user-type-option:hover {

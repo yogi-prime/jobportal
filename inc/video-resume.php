@@ -207,7 +207,7 @@ function jobportal_display_video_resume_in_application($post) {
                 Your browser does not support the video tag.
             </video>
             <p style="margin-top: 12px; font-size: 13px; color: #64748b;">
-                <a href="<?php echo esc_url($video_resume_url); ?>" download style="color: #4facfe; text-decoration: none; font-weight: 600;">
+                <a href="<?php echo esc_url($video_resume_url); ?>" download style="color: #00B4D8; text-decoration: none; font-weight: 600;">
                     ⬇️ Download Video Resume
                 </a>
             </p>
@@ -332,7 +332,7 @@ function jobportal_display_video_resume_player($video_url, $show_download = true
                    style="
                        display: inline-block;
                        padding: 10px 20px;
-                       background: #4facfe;
+                       background: #00B4D8;
                        color: white;
                        border-radius: 8px;
                        text-decoration: none;
@@ -428,7 +428,7 @@ function jobportal_video_resume_upload_form_shortcode() {
                         <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
                             <div id="upload-progress-bar" style="
                                 height: 100%;
-                                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                                background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
                                 width: 0%;
                                 transition: width 0.3s ease;
                             "></div>

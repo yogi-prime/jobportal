@@ -11,7 +11,7 @@ get_header();
 <style>
 /* Universal Hero - Consistent Across All Pages */
 .jobportal-page-hero-small {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
     padding: 140px 0 50px;
     position: relative;
     overflow: hidden;
@@ -221,7 +221,7 @@ get_header();
             background: #f1f5f9;
             border-radius: 20px;
             font-weight: 600;
-            color: #4facfe;
+            color: #00B4D8;
             margin: 0 4px;
         }
 
@@ -243,7 +243,7 @@ get_header();
         }
 
         .jobportal-suggestion-card:hover {
-            border-color: #4facfe;
+            border-color: #00B4D8;
             box-shadow: 0 8px 24px rgba(79, 172, 254, 0.15);
             transform: translateY(-4px);
         }
@@ -251,7 +251,7 @@ get_header();
         .jobportal-suggestion-card-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -284,7 +284,7 @@ get_header();
 
         .jobportal-suggestion-card li::before {
             content: '✓';
-            color: #4facfe;
+            color: #00B4D8;
             font-weight: 700;
             flex-shrink: 0;
         }
@@ -326,8 +326,8 @@ get_header();
 
         .jobportal-category-link:hover {
             background: white;
-            border-color: #4facfe;
-            color: #4facfe;
+            border-color: #00B4D8;
+            color: #00B4D8;
             transform: translateX(4px);
         }
 
@@ -357,7 +357,7 @@ get_header();
         }
 
         .jobportal-no-results-cta .primary {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #00B4D8 0%, #00C896 100%);
             color: white;
             box-shadow: 0 4px 16px rgba(79, 172, 254, 0.3);
         }
@@ -369,12 +369,12 @@ get_header();
 
         .jobportal-no-results-cta .secondary {
             background: white;
-            color: #4facfe;
-            border: 2px solid #4facfe;
+            color: #00B4D8;
+            border: 2px solid #00B4D8;
         }
 
         .jobportal-no-results-cta .secondary:hover {
-            background: #4facfe;
+            background: #00B4D8;
             color: white;
         }
 
