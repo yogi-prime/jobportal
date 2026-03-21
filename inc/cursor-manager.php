@@ -278,6 +278,20 @@ function careerhub_cursor_manager_page() {
         margin: 0;
         padding: 0;
         flex-shrink: 0;
+        position: relative;
+    }
+
+    .cursor-info input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #00B4D8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .cursor-info h3 label {
