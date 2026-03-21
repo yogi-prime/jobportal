@@ -67,7 +67,7 @@ function careerhub_cursor_manager_page() {
                         <h3>
                             <label>
                                 <input type="radio" name="cursor_style" value="none" <?php checked($current_style, 'none'); ?>>
-                                Default Cursor
+                                <span>Default Cursor</span>
                             </label>
                         </h3>
                         <p>Standard browser cursor. Clean and simple.</p>
@@ -87,7 +87,7 @@ function careerhub_cursor_manager_page() {
                         <h3>
                             <label>
                                 <input type="radio" name="cursor_style" value="gradient-ring" <?php checked($current_style, 'gradient-ring'); ?>>
-                                Gradient Ring
+                                <span>Gradient Ring</span>
                             </label>
                         </h3>
                         <p>Smooth animated ring with Career Hub gradient.</p>
@@ -107,7 +107,7 @@ function careerhub_cursor_manager_page() {
                         <h3>
                             <label>
                                 <input type="radio" name="cursor_style" value="neon-trail" <?php checked($current_style, 'neon-trail'); ?>>
-                                Neon Trail
+                                <span>Neon Trail</span>
                             </label>
                         </h3>
                         <p>Futuristic cursor with glowing trail effect.</p>
@@ -127,7 +127,7 @@ function careerhub_cursor_manager_page() {
                         <h3>
                             <label>
                                 <input type="radio" name="cursor_style" value="particle-burst" <?php checked($current_style, 'particle-burst'); ?>>
-                                Particle Burst
+                                <span>Particle Burst</span>
                             </label>
                         </h3>
                         <p>Magical particles burst on click. Interactive!</p>
@@ -147,7 +147,7 @@ function careerhub_cursor_manager_page() {
                         <h3>
                             <label>
                                 <input type="radio" name="cursor_style" value="magnetic-dot" <?php checked($current_style, 'magnetic-dot'); ?>>
-                                Magnetic Dot
+                                <span>Magnetic Dot</span>
                             </label>
                         </h3>
                         <p>Elegant dot that magnetically attracts to links.</p>
@@ -267,8 +267,6 @@ function careerhub_cursor_manager_page() {
 
     .cursor-info h3 {
         margin: 0 0 8px;
-        font-size: 18px;
-        color: #1e293b;
     }
 
     .cursor-info input[type="radio"] {
@@ -280,17 +278,20 @@ function careerhub_cursor_manager_page() {
         margin: 0;
         padding: 0;
         flex-shrink: 0;
-        vertical-align: middle;
     }
 
     .cursor-info h3 label {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         cursor: pointer;
         gap: 10px;
+    }
+
+    .cursor-info h3 label span {
         font-size: 18px;
         font-weight: 600;
-        line-height: 20px;
+        color: #1e293b;
+        line-height: 1.2;
     }
 
     .cursor-info p {
