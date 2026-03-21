@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Careers - JobPortal Elite Demo 1</title>
+    <meta name="description" content="Join our team of exceptional professionals. Explore career opportunities at a Fortune 500 company.">
+    <style>
+        /* Corporate Job Board Demo - Professional & Enterprise Style */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .cta-btn {
+            background: #1e40af;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: #1e3a8a;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: #1e40af;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(30, 64, 175, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Elite Features Showcase */
+        .elite-features {
+            background: #f8fafc;
+        }
+
+        .elite-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .elite-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .elite-tool {
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .elite-tool:hover {
+            border-color: #1e40af;
+            box-shadow: 0 20px 40px rgba(30, 64, 175, 0.12);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .tool-title {
+            flex: 1;
+        }
+
+        .tool-title h3 {
+            font-size: 24px;
+            margin-bottom: 4px;
+            color: #1e293b;
+        }
+
+        .tool-value {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .tool-features {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .tool-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tool-features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .tool-cta {
+            margin-top: 24px;
+            display: inline-block;
+            color: #1e40af;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid #1e40af;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .tool-cta:hover {
+            background: #1e40af;
+            color: white;
+        }
+
+        /* Open Positions */
+        .positions-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .job-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .job-card:hover {
+            border-color: #1e40af;
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.1);
+        }
+
+        .job-info h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 24px;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .apply-btn {
+            background: #1e40af;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            background: #1e3a8a;
+            transform: translateY(-2px);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+        }
+
+        .benefit h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .benefit p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero-stats { grid-template-columns: 1fr; gap: 32px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .elite-tools-grid { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-content { grid-template-columns: 1fr; }
+            .job-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">TechCorp</div>
+            <ul class="nav-links">
+                <li><a href="#positions">Open Positions</a></li>
+                <li><a href="#features">Elite Tools</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#culture">Culture</a></li>
+            </ul>
+            <a href="#apply" class="cta-btn">Apply Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Build Your Career<br>At TechCorp</h1>
+            <p>Join a Fortune 500 company with 50,000+ employees worldwide. We're looking for exceptional talent to shape the future of technology.</p>
+            <a href="#positions" class="cta-btn" style="font-size: 18px; padding: 16px 32px;">Explore Opportunities</a>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Employees Worldwide</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Open Positions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">Office Locations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Features Section -->
+    <section class="elite-features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="elite-badge">ELITE CAREER TOOLS</span>
+                <h2>Advanced Tools for Your Job Search</h2>
+                <p>We've built 5 unique tools to help you find the perfect role, prepare for interviews, and negotiate your best offer.</p>
+            </div>
+
+            <div class="elite-tools-grid">
+                <!-- Resume Builder -->
+                <div class="elite-tool">
+                    <div class="tool-header">
+                        <div class="tool-icon">📄</div>
+                        <div class="tool-title">
+                            <h3>Resume Builder</h3>
+                            <span class="tool-value">$40 Value</span>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; margin-bottom: 20px;">Create a professional resume in minutes with our drag-and-drop builder. Live preview shows you exactly how it looks.</p>
+                    <ul class="tool-features">
+                        <li>Real-time live preview</li>
+                        <li>Professional templates</li>
+                        <li>Add/remove sections easily</li>
+                        <li>Download as PDF</li>
+                    </ul>
+                    <a href="#" class="tool-cta">Build Your Resume →</a>
+                </div>
+
+                <!-- Job Matcher -->
+                <div class="elite-tool">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎯</div>
+                        <div class="tool-title">
+                            <h3>Job Matching Quiz</h3>
+                            <span class="tool-value">$50 Value</span>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; margin-bottom: 20px;">Answer 4 quick questions and get personalized job recommendations based on your skills and preferences.</p>
+                    <ul class="tool-features">
+                        <li>4-question interactive quiz</li>
+                        <li>AI-powered matching</li>
+                        <li>Match score percentage</li>
+                        <li>Sorted by relevance</li>
+                    </ul>
+                    <a href="#" class="tool-cta">Find Your Match →</a>
+                </div>
+
+                <!-- Salary Calculator -->
+                <div class="elite-tool">
+                    <div class="tool-header">
+                        <div class="tool-icon">💰</div>
+                        <div class="tool-title">
+                            <h3>Salary Calculator</h3>
+                            <span class="tool-value">$30 Value</span>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; margin-bottom: 20px;">Calculate your market value based on job title, experience, location, and skills. Get negotiation tips.</p>
+                    <ul class="tool-features">
+                        <li>Real industry salary data</li>
+                        <li>Location adjustments</li>
+                        <li>Experience multipliers</li>
+                        <li>Negotiation strategies</li>
+                    </ul>
+                    <a href="#" class="tool-cta">Calculate Salary →</a>
+                </div>
+
+                <!-- Interview Scheduler -->
+                <div class="elite-tool">
+                    <div class="tool-header">
+                        <div class="tool-icon">📅</div>
+                        <div class="tool-title">
+                            <h3>Interview Scheduler</h3>
+                            <span class="tool-value">$40 Value</span>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; margin-bottom: 20px;">Schedule your interview in seconds. Pick a time that works for you from our available slots.</p>
+                    <ul class="tool-features">
+                        <li>Visual calendar selection</li>
+                        <li>Multiple time zones</li>
+                        <li>Video/Phone/In-person options</li>
+                        <li>Email confirmation</li>
+                    </ul>
+                    <a href="#" class="tool-cta">Schedule Interview →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section id="positions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Open Positions</h2>
+                <p>Join one of our high-performing teams. We're hiring across engineering, product, design, marketing, and more.</p>
+            </div>
+
+            <div class="positions-grid">
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Senior Software Engineer</h3>
+                        <div class="job-meta">
+                            <span>📍 San Francisco, CA</span>
+                            <span>💼 Full-Time</span>
+                            <span>💰 $150K - $200K</span>
+                        </div>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Product Manager</h3>
+                        <div class="job-meta">
+                            <span>📍 New York, NY</span>
+                            <span>💼 Full-Time</span>
+                            <span>💰 $130K - $170K</span>
+                        </div>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>UX Designer</h3>
+                        <div class="job-meta">
+                            <span>📍 Remote</span>
+                            <span>💼 Full-Time</span>
+                            <span>💰 $110K - $140K</span>
+                        </div>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Marketing Manager</h3>
+                        <div class="job-meta">
+                            <span>📍 Austin, TX</span>
+                            <span>💼 Full-Time</span>
+                            <span>💰 $100K - $130K</span>
+                        </div>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Data Scientist</h3>
+                        <div class="job-meta">
+                            <span>📍 Seattle, WA</span>
+                            <span>💼 Full-Time</span>
+                            <span>💰 $140K - $180K</span>
+                        </div>
+                    </div>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>World-Class Benefits</h2>
+                <p>We invest in our people. Here's what you can expect as a TechCorp employee.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">🏥</div>
+                    <h3>Health & Wellness</h3>
+                    <p>Comprehensive medical, dental, and vision coverage for you and your family.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Salary</h3>
+                    <p>Top-of-market compensation with annual performance bonuses.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Learning Budget</h3>
+                    <p>$5,000/year for courses, conferences, and professional development.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">🏖️</div>
+                    <h3>Unlimited PTO</h3>
+                    <p>Take the time you need to recharge. Minimum 3 weeks encouraged.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">💼</div>
+                    <h3>401(k) Match</h3>
+                    <p>6% company match on retirement contributions. Vested immediately.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">🏡</div>
+                    <h3>Remote Flexible</h3>
+                    <p>Work from anywhere. We offer fully remote, hybrid, and in-office options.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">👶</div>
+                    <h3>Parental Leave</h3>
+                    <p>16 weeks paid leave for all parents, plus gradual return-to-work program.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Student Loan Help</h3>
+                    <p>$200/month contribution toward student loan payments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Join TechCorp?</h2>
+            <p>Take the first step toward an exceptional career. Explore our open positions or build your resume today.</p>
+            <div class="cta-buttons">
+                <a href="#positions" class="btn-primary">View Open Positions</a>
+                <a href="#" class="btn-secondary">Build Your Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Resume Builder</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Interview Tips</a></li>
+                        <li><a href="#">Career Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechCorp. All rights reserved. | Built with JobPortal Elite WordPress Theme</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

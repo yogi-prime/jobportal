@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Top Freelancers - JobPortal Elite Demo 3</title>
+    <meta name="description" content="Connect with talented freelancers worldwide. Find experts for your next project.">
+    <style>
+        /* Freelance Marketplace Demo - Creative, Portfolio-Focused Style */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #06b6d4;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-outline {
+            color: #06b6d4;
+            border: 2px solid #06b6d4;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #06b6d4;
+            color: white;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 50%, #ede9fe 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            color: #1e293b;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #64748b;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-bar {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            display: flex;
+            gap: 12px;
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #06b6d4;
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+        }
+
+        .categories {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .category-tag {
+            background: white;
+            color: #475569;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .category-tag:hover {
+            border-color: #06b6d4;
+            color: #06b6d4;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 100%);
+            color: #06b6d4;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Elite Tools */
+        .elite-tools {
+            background: #f8fafc;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .tool-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(6, 182, 212, 0.1);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .tool-title h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .tool-value {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #06b6d4;
+            font-weight: 700;
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+
+        .tool-link:hover {
+            gap: 12px;
+        }
+
+        /* Freelancers Grid */
+        .freelancers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .freelancer-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .freelancer-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+        }
+
+        .freelancer-header {
+            padding: 32px 24px 24px;
+            text-align: center;
+        }
+
+        .freelancer-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .freelancer-name {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #1e293b;
+        }
+
+        .freelancer-title {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .freelancer-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .freelancer-body {
+            padding: 0 24px 24px;
+        }
+
+        .freelancer-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skill-tag {
+            background: #f0fdfa;
+            color: #06b6d4;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .freelancer-stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-weight: 800;
+            color: #1e293b;
+            font-size: 18px;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        .hire-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .hire-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step:not(:last-child):after {
+            content: "→";
+            position: absolute;
+            right: -20px;
+            top: 40px;
+            font-size: 32px;
+            color: #cbd5e1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .step h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .step p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-white {
+            background: white;
+            color: #06b6d4;
+            padding: 18px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #06b6d4;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px; }
+            .search-bar { flex-direction: column; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .freelancers-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .step:after { display: none; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">FreelanceHub</div>
+            <ul class="nav-links">
+                <li><a href="#talents">Find Talent</a></li>
+                <li><a href="#tools">Free Tools</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="#login" class="btn-outline">Log In</a>
+                <a href="#signup" class="btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hire <span>Top Freelancers</span><br>For Your Next Project</h1>
+            <p>Connect with 10,000+ talented designers, developers, writers, and marketers. Get your project done faster.</p>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="What service are you looking for?">
+                <button class="search-btn">Search</button>
+            </div>
+
+            <div class="categories">
+                <span class="category-tag">Web Development</span>
+                <span class="category-tag">Graphic Design</span>
+                <span class="category-tag">Content Writing</span>
+                <span class="category-tag">Digital Marketing</span>
+                <span class="category-tag">Video Editing</span>
+                <span class="category-tag">Mobile Apps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Tools -->
+    <section class="elite-tools" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FREE TOOLS FOR FREELANCERS</span>
+                <h2>Grow Your Freelance Career</h2>
+                <p>We built these tools to help freelancers succeed. Use them 100% free!</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📄</div>
+                        <div class="tool-title">
+                            <h3>Portfolio Builder</h3>
+                            <span class="tool-value">$40 Value - FREE</span>
+                        </div>
+                    </div>
+                    <p>Create a stunning portfolio in minutes. Showcase your work with our drag-and-drop builder. Download as PDF or share online.</p>
+                    <a href="#" class="tool-link">Build Portfolio →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎯</div>
+                        <div class="tool-title">
+                            <h3>Project Matcher</h3>
+                            <span class="tool-value">$50 Value - FREE</span>
+                        </div>
+                    </div>
+                    <p>Answer 4 quick questions and get matched with projects perfect for your skills. See your compatibility score for each gig!</p>
+                    <a href="#" class="tool-link">Find Projects →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">💰</div>
+                        <div class="tool-title">
+                            <h3>Rate Calculator</h3>
+                            <span class="tool-value">$30 Value - FREE</span>
+                        </div>
+                    </div>
+                    <p>Calculate your freelance rate based on experience, skills, and market data. Know what to charge and negotiate confidently.</p>
+                    <a href="#" class="tool-link">Calculate Rate →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📅</div>
+                        <div class="tool-title">
+                            <h3>Client Scheduler</h3>
+                            <span class="tool-value">$40 Value - FREE</span>
+                        </div>
+                    </div>
+                    <p>Let clients book calls with you automatically. Pick available times, set timezone, and send them your link. Easy!</p>
+                    <a href="#" class="tool-link">Setup Scheduler →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Freelancers -->
+    <section id="talents">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">TOP RATED TALENT</span>
+                <h2>Meet Our Featured Freelancers</h2>
+                <p>Handpicked professionals ready to bring your project to life.</p>
+            </div>
+
+            <div class="freelancers-grid">
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">SK</div>
+                        <div class="freelancer-name">Sarah Kim</div>
+                        <div class="freelancer-title">Full-Stack Developer</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (87 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">124</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$95/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">98%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire Sarah</button>
+                    </div>
+                </div>
+
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">MJ</div>
+                        <div class="freelancer-name">Mike Johnson</div>
+                        <div class="freelancer-title">UI/UX Designer</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (142 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">UI Design</span>
+                            <span class="skill-tag">Branding</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">238</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$85/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire Mike</button>
+                    </div>
+                </div>
+
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">EP</div>
+                        <div class="freelancer-name">Emily Parker</div>
+                        <div class="freelancer-title">Content Writer</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (203 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">SEO Writing</span>
+                            <span class="skill-tag">Copywriting</span>
+                            <span class="skill-tag">Tech Blog</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">412</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$65/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire Emily</button>
+                    </div>
+                </div>
+
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">AC</div>
+                        <div class="freelancer-name">Alex Chen</div>
+                        <div class="freelancer-title">Video Editor</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (156 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">After Effects</span>
+                            <span class="skill-tag">Premiere Pro</span>
+                            <span class="skill-tag">Motion</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">189</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$75/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">97%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire Alex</button>
+                    </div>
+                </div>
+
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">LP</div>
+                        <div class="freelancer-name">Lisa Patel</div>
+                        <div class="freelancer-title">Digital Marketer</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (178 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">Facebook Ads</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">SEO</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">267</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$90/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire Lisa</button>
+                    </div>
+                </div>
+
+                <div class="freelancer-card">
+                    <div class="freelancer-header">
+                        <div class="freelancer-avatar">DB</div>
+                        <div class="freelancer-name">David Brown</div>
+                        <div class="freelancer-title">Mobile Developer</div>
+                        <div class="freelancer-rating">
+                            ⭐⭐⭐⭐⭐ <span>5.0 (134 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-body">
+                        <div class="freelancer-skills">
+                            <span class="skill-tag">iOS</span>
+                            <span class="skill-tag">Android</span>
+                            <span class="skill-tag">React Native</span>
+                        </div>
+                        <div class="freelancer-stats">
+                            <div class="stat">
+                                <div class="stat-value">97</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$105/hr</div>
+                                <div class="stat-label">Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">98%</div>
+                                <div class="stat-label">Success</div>
+                            </div>
+                        </div>
+                        <button class="hire-btn">Hire David</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SIMPLE PROCESS</span>
+                <h2>How FreelanceHub Works</h2>
+                <p>From posting a project to getting it done - in 4 easy steps.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Post Your Project</h3>
+                    <p>Describe what you need done and set your budget.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Proposals</h3>
+                    <p>Receive offers from qualified freelancers within hours.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Choose & Hire</h3>
+                    <p>Review portfolios, ratings, and pick the best freelancer.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get It Done</h3>
+                    <p>Collaborate, provide feedback, and get amazing results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHY CHOOSE US</span>
+                <h2>The Best Platform for Freelancers</h2>
+                <p>We're committed to making freelancing easier and more profitable.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💸</div>
+                    <h3>Lowest Fees</h3>
+                    <p>Only 5% service fee - the lowest in the industry. Keep more of what you earn.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>Money is held in escrow until work is complete. Get paid on time, every time.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Payouts</h3>
+                    <p>Withdraw your earnings instantly to your bank or PayPal. No waiting!</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Dispute Protection</h3>
+                    <p>Fair resolution process if things don't go as planned. We've got your back.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Quality Clients</h3>
+                    <p>Work with verified clients who respect deadlines and pay fairly.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Grow Your Business</h3>
+                    <p>Analytics, reviews, and tools to help you get more clients and earn more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Join 50,000+ businesses who trust FreelanceHub to get work done.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-white">Post a Project (Free)</a>
+                <a href="#" class="btn-outline-white">Browse Freelancers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="#">How to Hire</a></li>
+                        <li><a href="#">Talent Marketplace</a></li>
+                        <li><a href="#">Project Catalog</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>For Freelancers</h4>
+                    <ul>
+                        <li><a href="#">How to Find Work</a></li>
+                        <li><a href="#">Portfolio Builder</a></li>
+                        <li><a href="#">Rate Calculator</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreelanceHub. All rights reserved. | Built with JobPortal Elite WordPress Theme</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

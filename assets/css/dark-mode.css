@@ -1,0 +1,463 @@
+/**
+ * Dark Mode Styles
+ * Premium dark mode with glassmorphism
+ *
+ * @package JobPortal
+ */
+
+/* ============================================
+   DARK MODE VARIABLES
+   ============================================ */
+
+:root[data-theme="dark"] {
+    --color-bg: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-bg-elevated: #334155;
+    --color-text: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+    --color-border-light: #475569;
+    --color-primary: #4facfe;
+    --color-primary-hover: #38bdf8;
+    --color-card-bg: rgba(30, 41, 59, 0.8);
+    --color-card-border: rgba(71, 85, 105, 0.3);
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+body.theme-transitioning,
+body.theme-transitioning * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ============================================
+   DARK MODE TOGGLE BUTTON
+   ============================================ */
+
+.jobportal-dark-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    overflow: hidden;
+}
+
+.jobportal-dark-mode-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.jobportal-dark-mode-toggle .sun-icon,
+.jobportal-dark-mode-toggle .moon-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.jobportal-dark-mode-toggle .sun-icon {
+    left: 8px;
+    opacity: 1;
+}
+
+.jobportal-dark-mode-toggle .moon-icon {
+    right: 8px;
+    opacity: 0;
+}
+
+body.dark-mode .jobportal-dark-mode-toggle {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .jobportal-dark-mode-toggle .sun-icon {
+    opacity: 0;
+    left: -20px;
+}
+
+body.dark-mode .jobportal-dark-mode-toggle .moon-icon {
+    opacity: 1;
+    right: 8px;
+}
+
+/* ============================================
+   GLOBAL DARK MODE STYLES
+   ============================================ */
+
+body.dark-mode {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Text Colors */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--color-text);
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode th {
+    color: var(--color-text-secondary);
+}
+
+/* Backgrounds */
+body.dark-mode [style*="background: white"],
+body.dark-mode [style*="background:white"],
+body.dark-mode .jobportal-stat-card,
+body.dark-mode .jobportal-job-card,
+body.dark-mode .jobportal-applications-table,
+body.dark-mode .jobportal-auth-card,
+body.dark-mode [style*="background: #f8fafc"],
+body.dark-mode [style*="background:#f8fafc"] {
+    background: var(--color-card-bg) !important;
+    backdrop-filter: blur(10px);
+    border-color: var(--color-card-border) !important;
+}
+
+/* Borders */
+body.dark-mode [style*="border: 2px solid #e2e8f0"],
+body.dark-mode [style*="border:2px solid #e2e8f0"],
+body.dark-mode [style*="border-top: 2px solid #e2e8f0"],
+body.dark-mode [style*="border-bottom: 2px solid #e2e8f0"] {
+    border-color: var(--color-border) !important;
+}
+
+/* Form Inputs */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="tel"],
+body.dark-mode input[type="url"],
+body.dark-mode input[type="number"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background: var(--color-bg-elevated) !important;
+    color: var(--color-text) !important;
+    border-color: var(--color-border) !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1) !important;
+}
+
+/* Tables */
+body.dark-mode .jobportal-table thead {
+    background: var(--color-bg-secondary) !important;
+}
+
+body.dark-mode .jobportal-table th {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode .jobportal-table td {
+    border-top-color: var(--color-border) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+/* Specific Text Colors */
+body.dark-mode [style*="color: #1e293b"],
+body.dark-mode [style*="color:#1e293b"],
+body.dark-mode .jobportal-job-title,
+body.dark-mode .jobportal-stat-value {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode [style*="color: #64748b"],
+body.dark-mode [style*="color:#64748b"],
+body.dark-mode .jobportal-stat-label,
+body.dark-mode .jobportal-company-name {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode [style*="color: #475569"],
+body.dark-mode [style*="color:#475569"] {
+    color: var(--color-text-secondary) !important;
+}
+
+/* Secondary Buttons */
+body.dark-mode .jobportal-btn-secondary {
+    background: var(--color-bg-elevated) !important;
+    color: var(--color-text) !important;
+    border-color: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-btn-secondary:hover {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+/* Tabs */
+body.dark-mode .jobportal-tabs {
+    border-bottom-color: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-tab {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode .jobportal-tab.active {
+    color: var(--color-primary) !important;
+}
+
+/* File Upload */
+body.dark-mode .jobportal-file-upload {
+    background: var(--color-bg-elevated) !important;
+    border-color: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-file-upload:hover {
+    border-color: var(--color-primary) !important;
+    background: var(--color-bg-secondary) !important;
+}
+
+/* Modal */
+body.dark-mode .jobportal-modal-content {
+    background: var(--color-bg-secondary) !important;
+}
+
+body.dark-mode .jobportal-modal-body {
+    background: var(--color-bg-secondary) !important;
+}
+
+/* Auth Pages */
+body.dark-mode .jobportal-auth-page {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+}
+
+body.dark-mode .jobportal-auth-card {
+    background: var(--color-card-bg) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark-mode .jobportal-auth-logo h1 {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .jobportal-auth-logo p {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode .jobportal-auth-divider::before {
+    background: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-auth-divider span {
+    background: var(--color-bg-secondary) !important;
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode .jobportal-social-btn {
+    background: var(--color-bg-elevated) !important;
+    color: var(--color-text-secondary) !important;
+    border-color: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-social-btn:hover {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.dark-mode .jobportal-auth-footer,
+body.dark-mode .jobportal-terms {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode .jobportal-user-type-label {
+    background: var(--color-bg-elevated) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+/* Dashboard */
+body.dark-mode .jobportal-dashboard,
+body.dark-mode .jobportal-employer-dashboard {
+    background: var(--color-bg) !important;
+}
+
+body.dark-mode .jobportal-dashboard-welcome h1 {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .jobportal-dashboard-welcome p {
+    color: var(--color-text-muted) !important;
+}
+
+/* Empty States */
+body.dark-mode .jobportal-empty-state h3 {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .jobportal-empty-state p {
+    color: var(--color-text-muted) !important;
+}
+
+/* Job Cards on Single Job Page */
+body.dark-mode [style*="background: #f8fafc; border-radius: 8px"] {
+    background: var(--color-bg-elevated) !important;
+}
+
+/* Header */
+body.dark-mode .jobportal-header {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom-color: var(--color-border) !important;
+}
+
+body.dark-mode .jobportal-logo {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .jobportal-nav a {
+    color: var(--color-text-secondary) !important;
+}
+
+body.dark-mode .jobportal-nav a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background: var(--color-bg-secondary) !important;
+    border-top-color: var(--color-border) !important;
+}
+
+body.dark-mode footer h3,
+body.dark-mode footer h4 {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode footer a,
+body.dark-mode footer p {
+    color: var(--color-text-muted) !important;
+}
+
+body.dark-mode footer a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Gradients - Keep vibrant in dark mode */
+body.dark-mode [style*="background: linear-gradient"],
+body.dark-mode .jobportal-btn-primary,
+body.dark-mode .jobportal-submit-btn {
+    /* Gradients remain unchanged for visual pop */
+}
+
+/* Shadows - Adjust for dark mode */
+body.dark-mode [style*="box-shadow"] {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Status Badges - Keep original colors for clarity */
+body.dark-mode .jobportal-status-badge {
+    /* Status badges keep their original colors for easy recognition */
+}
+
+/* Stat Icons */
+body.dark-mode .jobportal-stat-icon {
+    opacity: 0.9;
+}
+
+/* Hero Sections - Slightly dimmed */
+body.dark-mode [style*="background: linear-gradient(135deg, #4facfe"],
+body.dark-mode [style*="background: linear-gradient(135deg, #667eea"] {
+    filter: brightness(0.85);
+}
+
+/* Links */
+body.dark-mode a {
+    color: var(--color-primary);
+}
+
+body.dark-mode a:hover {
+    color: var(--color-primary-hover);
+}
+
+/* Scrollbar */
+body.dark-mode ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--color-bg-elevated);
+    border-radius: 5px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-light);
+}
+
+/* Selection */
+body.dark-mode ::selection {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* ============================================
+   GLASSMORPHISM ENHANCEMENTS (Dark Mode)
+   ============================================ */
+
+body.dark-mode .jobportal-stat-card,
+body.dark-mode .jobportal-job-card,
+body.dark-mode .jobportal-applications-table {
+    background: rgba(30, 41, 59, 0.6) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(71, 85, 105, 0.3) !important;
+}
+
+body.dark-mode .jobportal-stat-card:hover,
+body.dark-mode .jobportal-job-card:hover {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border-color: rgba(79, 172, 254, 0.4) !important;
+}
+
+/* ============================================
+   RESPONSIVE DARK MODE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .jobportal-dark-mode-toggle {
+        width: 50px;
+        height: 28px;
+    }
+
+    .jobportal-dark-mode-toggle .sun-icon,
+    .jobportal-dark-mode-toggle .moon-icon {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Optional: Respect system preference */
+    /* Uncomment to auto-enable dark mode based on system settings */
+    /*
+    body:not([data-theme-override]) {
+        background: var(--color-bg);
+        color: var(--color-text);
+    }
+    */
+}

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Rocket Ship - JobPortal Elite Demo 2</title>
+    <meta name="description" content="We're building something awesome. Join our talented team and help shape the future!">
+    <style>
+        /* Startup Careers Demo - Modern, Vibrant & Fun Style */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #f97316;
+            transform: translateY(-1px);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 50%, #ddd6fe 100%);
+            padding: 140px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: "🚀";
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.05;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #475569;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #f97316;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: white;
+            padding: 16px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-emoji {
+            font-size: 24px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+            color: #f97316;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Elite Tools */
+        .elite-tools {
+            background: linear-gradient(135deg, #f8fafc 0%, #fef3c7 100%);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .tool-card:nth-child(1) { border-color: #fbbf24; }
+        .tool-card:nth-child(2) { border-color: #f97316; }
+        .tool-card:nth-child(3) { border-color: #ec4899; }
+        .tool-card:nth-child(4) { border-color: #8b5cf6; }
+
+        .tool-emoji {
+            font-size: 56px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .tool-header {
+            margin-bottom: 16px;
+        }
+
+        .tool-header h3 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .tool-value {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            margin-bottom: 24px;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #f97316;
+            font-weight: 700;
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+
+        .tool-link:hover {
+            gap: 12px;
+        }
+
+        /* Open Roles */
+        .open-roles {
+            background: white;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 32px;
+            border-radius: 20px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .role-card:hover {
+            border-color: #f97316;
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.15);
+        }
+
+        .role-emoji {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .role-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .role-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: #fef3c7;
+            color: #f59e0b;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .role-description {
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .role-apply {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .role-apply:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Perks */
+        .perks {
+            background: linear-gradient(135deg, #fce7f3 0%, #ddd6fe 100%);
+        }
+
+        .perks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .perk-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .perk-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .perk-emoji {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .perk-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .perk-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Culture */
+        .culture {
+            background: white;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .culture-item {
+            display: flex;
+            gap: 24px;
+        }
+
+        .culture-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .culture-content h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .culture-content p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta:before {
+            content: "✨";
+            position: absolute;
+            font-size: 400px;
+            opacity: 0.05;
+            top: -100px;
+            left: -100px;
+        }
+
+        .final-cta h2 {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .final-cta p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .btn-white {
+            background: white;
+            color: #f97316;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 18px;
+            border: 3px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #1e293b;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: #f97316;
+            transform: translateY(-2px);
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #f97316;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 42px; }
+            .section-header h2 { font-size: 36px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .roles-grid { grid-template-columns: 1fr; }
+            .perks-grid { grid-template-columns: 1fr; }
+            .culture-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hero-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">RocketShip 🚀</div>
+            <ul class="nav-links">
+                <li><a href="#roles">Open Roles</a></li>
+                <li><a href="#tools">Career Tools</a></li>
+                <li><a href="#perks">Perks</a></li>
+                <li><a href="#culture">Culture</a></li>
+            </ul>
+            <a href="#apply" class="cta-btn">Join Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Join Our Rocket Ship 🚀</h1>
+            <p>We're a fast-growing startup building the future of AI-powered productivity. Join our talented team of 50+ awesome humans and help us change the world!</p>
+
+            <div class="hero-buttons">
+                <a href="#roles" class="btn-primary">View Open Roles</a>
+                <a href="#" class="btn-secondary">Build Your Resume</a>
+            </div>
+
+            <div class="hero-badges">
+                <div class="badge">
+                    <span class="badge-emoji">💰</span>
+                    <span>$10M Series A</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-emoji">⚡</span>
+                    <span>Growing Fast</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-emoji">🌍</span>
+                    <span>Remote-First</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-emoji">🎉</span>
+                    <span>Awesome Culture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Tools -->
+    <section class="elite-tools" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FREE Career Tools</span>
+                <h2>Level Up Your Job Search</h2>
+                <p>We built these tools to help you find your dream job. Use them for free, even if you don't apply to RocketShip!</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <span class="tool-emoji">📝</span>
+                    <div class="tool-header">
+                        <h3>Resume Builder</h3>
+                        <span class="tool-value">$40 Value - FREE!</span>
+                    </div>
+                    <p>Create a stunning resume in 10 minutes. Drag-and-drop builder with live preview. Download as PDF and impress recruiters!</p>
+                    <a href="#" class="tool-link">
+                        Build Resume →
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <span class="tool-emoji">🎯</span>
+                    <div class="tool-header">
+                        <h3>Job Matcher</h3>
+                        <span class="tool-value">$50 Value - FREE!</span>
+                    </div>
+                    <p>Take our 4-question quiz and get personalized job recommendations. See your match percentage for each role!</p>
+                    <a href="#" class="tool-link">
+                        Find Your Match →
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <span class="tool-emoji">💰</span>
+                    <div class="tool-header">
+                        <h3>Salary Calculator</h3>
+                        <span class="tool-value">$30 Value - FREE!</span>
+                    </div>
+                    <p>Know your worth! Calculate your market value based on role, experience, location, and skills. Get negotiation tips too.</p>
+                    <a href="#" class="tool-link">
+                        Calculate Salary →
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <span class="tool-emoji">📅</span>
+                    <div class="tool-header">
+                        <h3>Interview Scheduler</h3>
+                        <span class="tool-value">$40 Value - FREE!</span>
+                    </div>
+                    <p>Pick a time that works for you from our available slots. No more back-and-forth emails. Schedule in seconds!</p>
+                    <a href="#" class="tool-link">
+                        Schedule Interview →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Roles -->
+    <section class="open-roles" id="roles">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">We're Hiring!</span>
+                <h2>Open Roles at RocketShip</h2>
+                <p>Join our mission to empower 10 million people with AI. All roles are remote-friendly with competitive salary and equity.</p>
+            </div>
+
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-emoji">👩‍💻</div>
+                    <h3>Senior Full-Stack Engineer</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Remote</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$140K - $180K</span>
+                    </div>
+                    <p class="role-description">Build our AI-powered platform with React, Node.js, and Python. Work on features used by millions.</p>
+                    <a href="#" class="role-apply">Apply Now 🚀</a>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-emoji">🎨</div>
+                    <h3>Product Designer</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Remote</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$120K - $150K</span>
+                    </div>
+                    <p class="role-description">Design beautiful, intuitive experiences. Own the product design from research to final pixels.</p>
+                    <a href="#" class="role-apply">Apply Now 🎨</a>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-emoji">📊</div>
+                    <h3>Growth Marketing Lead</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Hybrid</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$110K - $140K</span>
+                    </div>
+                    <p class="role-description">Drive user acquisition and retention. Run experiments, optimize funnels, and grow our user base.</p>
+                    <a href="#" class="role-apply">Apply Now 📈</a>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-emoji">🤖</div>
+                    <h3>Machine Learning Engineer</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Remote</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$160K - $200K</span>
+                    </div>
+                    <p class="role-description">Build and deploy ML models that power our AI features. Work with cutting-edge tech.</p>
+                    <a href="#" class="role-apply">Apply Now 🧠</a>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-emoji">💬</div>
+                    <h3>Customer Success Manager</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Remote</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$80K - $110K</span>
+                    </div>
+                    <p class="role-description">Be the voice of our customers. Help them succeed and provide feedback to shape our product.</p>
+                    <a href="#" class="role-apply">Apply Now 💙</a>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-emoji">📱</div>
+                    <h3>Mobile Developer (iOS/Android)</h3>
+                    <div class="role-meta">
+                        <span class="meta-tag">Remote</span>
+                        <span class="meta-tag">Full-Time</span>
+                        <span class="meta-tag">$130K - $170K</span>
+                    </div>
+                    <p class="role-description">Build our mobile apps from scratch. Shape the mobile experience for millions of users.</p>
+                    <a href="#" class="role-apply">Apply Now 📲</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="perks" id="perks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Amazing Perks</span>
+                <h2>Why You'll Love Working Here</h2>
+                <p>We take care of our team. Here's what you get when you join RocketShip.</p>
+            </div>
+
+            <div class="perks-grid">
+                <div class="perk-card">
+                    <div class="perk-emoji">💰</div>
+                    <h3>Competitive Salary + Equity</h3>
+                    <p>Top-of-market pay plus meaningful equity. Your success is our success.</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🏡</div>
+                    <h3>Work From Anywhere</h3>
+                    <p>We're remote-first. Work from home, a cafe, or the beach. Your choice!</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🏥</div>
+                    <h3>Health & Wellness</h3>
+                    <p>Top-tier medical, dental, and vision. Plus $100/month wellness budget.</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🎓</div>
+                    <h3>Learning Budget</h3>
+                    <p>$3,000/year for courses, books, and conferences. Keep growing!</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🌴</div>
+                    <h3>Unlimited Vacation</h3>
+                    <p>Take time when you need it. Minimum 4 weeks encouraged.</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">💻</div>
+                    <h3>Latest Tech</h3>
+                    <p>MacBook Pro, monitor, and any tools you need to do your best work.</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🎉</div>
+                    <h3>Team Retreats</h3>
+                    <p>Twice-yearly all-hands in amazing locations. Last one was in Bali!</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">🚀</div>
+                    <h3>Stock Options</h3>
+                    <p>Early-stage equity with huge upside potential. Get rich with us!</p>
+                </div>
+
+                <div class="perk-card">
+                    <div class="perk-emoji">👶</div>
+                    <h3>Parental Leave</h3>
+                    <p>12 weeks fully paid for all parents. Plus gradual return program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture -->
+    <section class="culture" id="culture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Culture</span>
+                <h2>What Makes Us Different</h2>
+                <p>We're not your typical startup. Here's what makes RocketShip special.</p>
+            </div>
+
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon">⚡</div>
+                    <div class="culture-content">
+                        <h3>Move Fast, Build Quality</h3>
+                        <p>We ship quickly but never compromise on quality. Every release makes our users happy.</p>
+                    </div>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon">🌈</div>
+                    <div class="culture-content">
+                        <h3>Diverse & Inclusive</h3>
+                        <p>50% of our team is women. We celebrate all backgrounds, identities, and perspectives.</p>
+                    </div>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon">🎯</div>
+                    <div class="culture-content">
+                        <h3>Impact Over Hours</h3>
+                        <p>We measure results, not hours worked. Do your best work in whatever time works for you.</p>
+                    </div>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon">💬</div>
+                    <div class="culture-content">
+                        <h3>Transparent & Open</h3>
+                        <p>Everyone has access to all company metrics. We share wins, losses, and learnings openly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Join the Adventure?</h2>
+            <p>Apply to an open role or just build your resume. Either way, we'd love to meet you!</p>
+            <div class="cta-buttons">
+                <a href="#roles" class="btn-white">View Open Roles</a>
+                <a href="#" class="btn-outline">Build Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>RocketShip 🚀</h3>
+                    <p>We're building AI-powered productivity tools for 10 million people worldwide. Join us on the journey!</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Li</a>
+                        <a href="#" class="social-link">Tw</a>
+                        <a href="#" class="social-link">Fb</a>
+                        <a href="#" class="social-link">Ig</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Resume Builder</a></li>
+                        <li><a href="#">Job Matcher</a></li>
+                        <li><a href="#">Salary Calc</a></li>
+                        <li><a href="#">Interview Tips</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 RocketShip. All rights reserved. | Built with JobPortal Elite WordPress Theme</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

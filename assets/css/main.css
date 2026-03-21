@@ -1,0 +1,2966 @@
+/**
+ * JobPortal Theme - Additional Styles
+ *
+ * @package JobPortal
+ */
+
+/* ============================================
+   GLOBAL HERO & PAGE PADDING FIX
+   Prevents content from going behind header
+   ============================================ */
+
+/* Fix for ALL hero sections on ALL pages */
+.jobportal-page-hero,
+.jobportal-single-hero,
+[class*="hero"],
+.page-header,
+.entry-header {
+    padding-top: 120px !important;
+}
+
+/* Fix for pages without hero (ensure content doesn't hide) */
+body:not(.home) #primary,
+body:not(.home) .site-content {
+    padding-top: 100px;
+}
+
+/* Homepage fix */
+body.home .jobportal-page-hero:first-of-type {
+    padding-top: 140px !important;
+}
+
+/* Single post fix */
+body.single-post .jobportal-single-hero {
+    padding-top: 120px !important;
+}
+
+/* Archive/Blog pages fix */
+body.blog .jobportal-page-hero,
+body.archive .jobportal-page-hero {
+    padding-top: 120px !important;
+}
+
+/* Search page fix */
+body.search .jobportal-page-hero {
+    padding-top: 120px !important;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .jobportal-page-hero,
+    .jobportal-single-hero,
+    [class*="hero"] {
+        padding-top: 110px !important;
+    }
+
+    body:not(.home) #primary,
+    body:not(.home) .site-content {
+        padding-top: 90px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .jobportal-page-hero,
+    .jobportal-single-hero,
+    [class*="hero"] {
+        padding-top: 100px !important;
+    }
+
+    body:not(.home) #primary,
+    body:not(.home) .site-content {
+        padding-top: 80px;
+    }
+
+    body.home .jobportal-page-hero:first-of-type {
+        padding-top: 110px !important;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .jobportal-page-hero,
+    .jobportal-single-hero,
+    [class*="hero"] {
+        padding-top: 90px !important;
+    }
+
+    body:not(.home) #primary,
+    body:not(.home) .site-content {
+        padding-top: 70px;
+    }
+}
+
+/* Ultra Responsive - Extra Small Devices */
+@media (max-width: 375px) {
+    .jobportal-page-hero,
+    .jobportal-single-hero,
+    [class*="hero"] {
+        padding-top: 85px !important;
+    }
+}
+
+/* Ultra Wide Screens */
+@media (min-width: 1920px) {
+    .jobportal-page-hero,
+    .jobportal-single-hero,
+    [class*="hero"] {
+        padding-top: 130px !important;
+    }
+}
+
+/* Preloader Styles */
+.jobportal-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--jobportal-white);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.jobportal-preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.jobportal-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--jobportal-gray-200);
+    border-top-color: var(--jobportal-primary);
+    border-radius: 50%;
+    animation: jobportal-spin 0.8s linear infinite;
+}
+
+.jobportal-dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: var(--jobportal-primary);
+    border-radius: 50%;
+    animation: jobportal-bounce 1.4s infinite ease-in-out both;
+}
+
+.jobportal-dots span:nth-child(1) { animation-delay: -0.32s; }
+.jobportal-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes jobportal-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes jobportal-bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   DASHBOARD MOCKUP - Hero Section
+   ========================================================================== */
+.jobportal-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobportal-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+}
+
+.jobportal-hero-image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.jobportal-dashboard-mockup {
+    width: 100%;
+    background: var(--jobportal-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+.jobportal-dashboard-mockup:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.jobportal-mockup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--jobportal-gray-900);
+    border-bottom: 1px solid var(--jobportal-gray-800);
+}
+
+.jobportal-mockup-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.jobportal-mockup-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.jobportal-mockup-dots span:nth-child(1) { background: #ff5f57; }
+.jobportal-mockup-dots span:nth-child(2) { background: #febc2e; }
+.jobportal-mockup-dots span:nth-child(3) { background: #28c840; }
+
+.jobportal-mockup-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+.jobportal-mockup-tabs span {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: var(--jobportal-gray-400);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.jobportal-mockup-tabs span.active {
+    background: var(--jobportal-gray-800);
+    color: var(--jobportal-white);
+}
+
+.jobportal-mockup-body {
+    display: flex;
+    min-height: 350px;
+    background: var(--jobportal-gray-50);
+}
+
+.jobportal-mockup-sidebar {
+    width: 60px;
+    background: var(--jobportal-gray-900);
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobportal-mockup-logo {
+    width: 40px;
+    height: 40px;
+    background: var(--jobportal-gradient-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.jobportal-mockup-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jobportal-mockup-nav-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--jobportal-gray-500);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.jobportal-mockup-nav-item:hover,
+.jobportal-mockup-nav-item.active {
+    background: var(--jobportal-gray-800);
+    color: var(--jobportal-primary);
+}
+
+.jobportal-mockup-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Stats Row */
+.jobportal-mockup-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.jobportal-mockup-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--jobportal-white);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.jobportal-mockup-stat-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--jobportal-primary-light);
+    color: var(--jobportal-primary);
+    border-radius: 10px;
+}
+
+.jobportal-mockup-stat-icon.green {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.jobportal-mockup-stat-icon.orange {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.jobportal-mockup-stat-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobportal-mockup-stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-mockup-stat-label {
+    font-size: 11px;
+    color: var(--jobportal-gray-500);
+}
+
+.jobportal-mockup-stat-badge {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.jobportal-mockup-stat-badge.up {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+/* Chart */
+.jobportal-mockup-chart {
+    flex: 1;
+    background: var(--jobportal-white);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.jobportal-mockup-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.jobportal-mockup-chart-header span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-mockup-chart-period {
+    font-size: 12px;
+    color: var(--jobportal-gray-500);
+    padding: 4px 10px;
+    background: var(--jobportal-gray-100);
+    border-radius: 50px;
+}
+
+.jobportal-mockup-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 120px;
+    padding-top: 20px;
+}
+
+.jobportal-chart-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobportal-chart-bar::before {
+    content: '';
+    width: 24px;
+    height: var(--height, 50%);
+    background: var(--jobportal-gray-200);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.jobportal-chart-bar:hover::before,
+.jobportal-chart-bar.active::before {
+    background: var(--jobportal-gradient-primary);
+}
+
+.jobportal-chart-bar span {
+    font-size: 10px;
+    color: var(--jobportal-gray-500);
+}
+
+/* Cards Row */
+.jobportal-mockup-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.jobportal-mockup-card {
+    height: 60px;
+    background: var(--jobportal-white);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   BLOG STYLES
+   ========================================================================== */
+
+/* Blog Page Header */
+.jobportal-page-header {
+    padding: 120px 0 60px;
+    background: linear-gradient(135deg, var(--jobportal-gray-50) 0%, var(--jobportal-white) 100%);
+    text-align: center;
+}
+
+.jobportal-page-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 16px;
+}
+
+.jobportal-page-description {
+    font-size: 1.125rem;
+    color: var(--jobportal-gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Wrapper */
+.jobportal-content-wrapper {
+    display: grid;
+    gap: 48px;
+    padding: 60px 0;
+}
+
+.jobportal-content-wrapper.jobportal-sidebar-right {
+    grid-template-columns: 1fr 320px;
+}
+
+.jobportal-content-wrapper.jobportal-sidebar-left {
+    grid-template-columns: 320px 1fr;
+}
+
+.jobportal-content-wrapper.jobportal-sidebar-left .jobportal-sidebar {
+    order: -1;
+}
+
+.jobportal-content-wrapper.jobportal-sidebar-none {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Posts Grid */
+.jobportal-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.jobportal-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Post Card */
+.jobportal-post-card {
+    background: var(--jobportal-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.jobportal-post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+.jobportal-post-card-image {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--jobportal-primary-light) 0%, var(--jobportal-secondary-light) 100%);
+}
+
+.jobportal-post-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--jobportal-primary);
+    opacity: 0.5;
+}
+
+.jobportal-post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.jobportal-post-card:hover .jobportal-post-card-image img {
+    transform: scale(1.05);
+}
+
+/* Placeholder for posts without images */
+.jobportal-post-card-image:empty::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E") no-repeat center;
+    opacity: 0.5;
+}
+
+.jobportal-post-card-content {
+    padding: 24px;
+}
+
+.jobportal-post-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.jobportal-post-card-category {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--jobportal-primary);
+    background: var(--jobportal-primary-light);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.jobportal-post-card-category:hover {
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+}
+
+.jobportal-post-card-date {
+    font-size: 13px;
+    color: var(--jobportal-gray-500);
+}
+
+.jobportal-post-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.jobportal-post-card-title a {
+    color: var(--jobportal-gray-900);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.jobportal-post-card-title a:hover {
+    color: var(--jobportal-primary);
+}
+
+.jobportal-post-card-excerpt {
+    font-size: 14px;
+    color: var(--jobportal-gray-600);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.jobportal-post-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--jobportal-gray-100);
+}
+
+.jobportal-post-card-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jobportal-post-card-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.jobportal-post-card-author span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--jobportal-gray-700);
+}
+
+.jobportal-post-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-primary);
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.jobportal-post-card-link:hover {
+    gap: 10px;
+}
+
+/* Sidebar */
+.jobportal-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.jobportal-widget {
+    background: var(--jobportal-white);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.jobportal-widget-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--jobportal-primary);
+}
+
+.jobportal-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jobportal-widget li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--jobportal-gray-100);
+}
+
+.jobportal-widget li:last-child {
+    border-bottom: none;
+}
+
+.jobportal-widget a {
+    color: var(--jobportal-gray-600);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.jobportal-widget a:hover {
+    color: var(--jobportal-primary);
+}
+
+/* Pagination */
+.jobportal-pagination {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.jobportal-pagination .nav-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobportal-pagination a,
+.jobportal-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--jobportal-gray-600);
+    background: var(--jobportal-white);
+    border: 1px solid var(--jobportal-gray-200);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.jobportal-pagination a:hover {
+    background: var(--jobportal-primary-light);
+    border-color: var(--jobportal-primary);
+    color: var(--jobportal-primary);
+}
+
+.jobportal-pagination .current {
+    background: var(--jobportal-primary);
+    border-color: var(--jobportal-primary);
+    color: var(--jobportal-white);
+}
+
+.jobportal-pagination .prev,
+.jobportal-pagination .next {
+    gap: 8px;
+}
+
+/* ==========================================================================
+   SINGLE POST STYLES
+   ========================================================================== */
+.jobportal-single-post {
+    padding-top: 100px;
+}
+
+.jobportal-post-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(180deg, var(--jobportal-gray-50) 0%, var(--jobportal-white) 100%);
+}
+
+.jobportal-post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.jobportal-post-category {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--jobportal-primary);
+    background: var(--jobportal-primary-light);
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.jobportal-post-date,
+.jobportal-post-read-time {
+    font-size: 14px;
+    color: var(--jobportal-gray-500);
+}
+
+.jobportal-post-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--jobportal-gray-900);
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.jobportal-post-author-info {
+    display: flex;
+    justify-content: center;
+}
+
+.jobportal-author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background: var(--jobportal-white);
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+.jobportal-author-link:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.jobportal-author-link img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.jobportal-author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+}
+
+/* Featured Image */
+.jobportal-post-featured-image {
+    margin: 32px 0;
+}
+
+.jobportal-post-featured-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Entry Content */
+.jobportal-entry-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--jobportal-gray-700);
+}
+
+.jobportal-entry-content h2,
+.jobportal-entry-content h3,
+.jobportal-entry-content h4 {
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-entry-content p {
+    margin-bottom: 1.5em;
+}
+
+.jobportal-entry-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2em 0;
+}
+
+.jobportal-entry-content blockquote {
+    margin: 2em 0;
+    padding: 24px 32px;
+    background: var(--jobportal-gray-50);
+    border-left: 4px solid var(--jobportal-primary);
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+}
+
+.jobportal-entry-content code {
+    padding: 2px 8px;
+    background: var(--jobportal-gray-100);
+    border-radius: 4px;
+    font-family: var(--jobportal-font-mono);
+    font-size: 0.9em;
+}
+
+.jobportal-entry-content pre {
+    padding: 24px;
+    background: var(--jobportal-gray-900);
+    color: var(--jobportal-gray-100);
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.jobportal-entry-content pre code {
+    padding: 0;
+    background: none;
+}
+
+/* Post Tags */
+.jobportal-post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0;
+    margin-top: 32px;
+    border-top: 1px solid var(--jobportal-gray-200);
+}
+
+.jobportal-tags-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+}
+
+.jobportal-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--jobportal-gray-600);
+    background: var(--jobportal-gray-100);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.jobportal-tag:hover {
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+}
+
+/* Share Links */
+.jobportal-post-share {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--jobportal-gray-200);
+}
+
+.jobportal-share-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+}
+
+.jobportal-share-links {
+    display: flex;
+    gap: 10px;
+}
+
+.jobportal-share-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--jobportal-gray-600);
+    background: var(--jobportal-gray-100);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.jobportal-share-link:hover {
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+}
+
+/* Post Navigation */
+.jobportal-post-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 32px 0;
+}
+
+.jobportal-nav-prev,
+.jobportal-nav-next {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--jobportal-gray-50);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.jobportal-nav-prev:hover,
+.jobportal-nav-next:hover {
+    background: var(--jobportal-gray-100);
+}
+
+.jobportal-nav-next {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.jobportal-nav-label {
+    display: block;
+    font-size: 12px;
+    color: var(--jobportal-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.jobportal-nav-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-900);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* No Posts */
+.jobportal-no-posts {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.jobportal-no-posts-icon {
+    color: var(--jobportal-gray-300);
+    margin-bottom: 24px;
+}
+
+.jobportal-no-posts h2 {
+    font-size: 1.5rem;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 12px;
+}
+
+.jobportal-no-posts p {
+    color: var(--jobportal-gray-600);
+    margin-bottom: 24px;
+}
+
+/* Blog Section */
+.jobportal-blog-section {
+    padding: 60px 0 80px;
+}
+
+/* Widget CTA */
+.jobportal-widget-cta {
+    background: var(--jobportal-gradient-primary);
+    color: var(--jobportal-white);
+    padding: 0;
+    overflow: hidden;
+}
+
+.jobportal-widget-cta-content {
+    padding: 28px;
+}
+
+.jobportal-widget-cta h3 {
+    color: var(--jobportal-white);
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.jobportal-widget-cta p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.jobportal-newsletter-form-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.jobportal-newsletter-form-widget input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--jobportal-white);
+}
+
+.jobportal-newsletter-form-widget input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.jobportal-newsletter-form-widget button {
+    width: 100%;
+    background: var(--jobportal-white);
+    color: var(--jobportal-primary);
+}
+
+.jobportal-newsletter-form-widget button:hover {
+    background: var(--jobportal-gray-100);
+}
+
+/* Recent Posts Widget */
+.jobportal-widget-recent li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.jobportal-recent-date {
+    font-size: 12px;
+    color: var(--jobportal-gray-400);
+}
+
+/* Search Form Widget */
+.jobportal-widget-search .search-form {
+    display: flex;
+    gap: 8px;
+}
+
+.jobportal-widget-search .search-field {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid var(--jobportal-gray-200);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.jobportal-widget-search .search-submit {
+    padding: 10px 16px;
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.jobportal-widget-search .search-submit:hover {
+    background: var(--jobportal-primary-hover);
+}
+
+/* Page Hero Blog */
+.jobportal-page-hero-blog {
+    background: linear-gradient(135deg, var(--jobportal-gray-50) 0%, var(--jobportal-primary-light) 50%, var(--jobportal-gray-50) 100%);
+}
+
+/* ==========================================================================
+   RESPONSIVE BLOG STYLES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .jobportal-content-wrapper.jobportal-sidebar-right,
+    .jobportal-content-wrapper.jobportal-sidebar-left {
+        grid-template-columns: 1fr;
+    }
+
+    .jobportal-sidebar {
+        position: static;
+    }
+
+    .jobportal-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .jobportal-page-header {
+        padding: 100px 0 40px;
+    }
+
+    .jobportal-posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobportal-post-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .jobportal-mockup-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .jobportal-mockup-body {
+        flex-direction: column;
+    }
+
+    .jobportal-mockup-sidebar {
+        width: 100%;
+        flex-direction: row;
+        padding: 12px;
+    }
+
+    .jobportal-mockup-nav {
+        flex-direction: row;
+    }
+}
+
+/* Mobile Menu Open State */
+body.jobportal-menu-open {
+    overflow: hidden;
+}
+
+/* Admin Bar Fixes */
+.admin-bar .jobportal-header.jobportal-header-sticky {
+    top: 32px;
+}
+
+@media (max-width: 782px) {
+    .admin-bar .jobportal-header.jobportal-header-sticky {
+        top: 46px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .jobportal-header,
+    .jobportal-footer,
+    .jobportal-preloader,
+    .jobportal-mobile-menu,
+    .jobportal-cta-section {
+        display: none !important;
+    }
+
+    .jobportal-main {
+        padding: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   COMPANY LOGOS SECTION
+   ========================================================================== */
+.jobportal-logos-section {
+    padding: 60px 0;
+    background: var(--jobportal-gray-50);
+    border-top: 1px solid var(--jobportal-gray-100);
+    border-bottom: 1px solid var(--jobportal-gray-100);
+}
+
+.jobportal-logos-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--jobportal-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+}
+
+.jobportal-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.jobportal-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--jobportal-gray-400);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.jobportal-logo-item:hover {
+    color: var(--jobportal-gray-700);
+    opacity: 1;
+}
+
+.jobportal-logo-item svg {
+    max-width: 120px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .jobportal-logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .jobportal-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* ==========================================================================
+   PRICING TOGGLE
+   ========================================================================== */
+.jobportal-pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.jobportal-pricing-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--jobportal-gray-500);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobportal-pricing-label.active {
+    color: var(--jobportal-gray-900);
+    font-weight: 600;
+}
+
+.jobportal-toggle-switch {
+    position: relative;
+    width: 56px;
+    height: 30px;
+    background: var(--jobportal-gray-200);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0;
+}
+
+.jobportal-toggle-switch[aria-pressed="true"] {
+    background: var(--jobportal-primary);
+}
+
+.jobportal-toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: var(--jobportal-white);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.jobportal-toggle-switch[aria-pressed="true"] .jobportal-toggle-slider {
+    transform: translateX(26px);
+}
+
+.jobportal-save-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--jobportal-white);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+/* Pricing Cards */
+.jobportal-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.jobportal-pricing-card {
+    position: relative;
+    background: var(--jobportal-white);
+    border-radius: 20px;
+    padding: 32px;
+    border: 1px solid var(--jobportal-gray-200);
+    transition: all 0.3s ease;
+}
+
+.jobportal-pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+.jobportal-pricing-popular {
+    border: 2px solid var(--jobportal-primary);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.jobportal-pricing-popular:hover {
+    transform: scale(1.05) translateY(-4px);
+}
+
+.jobportal-popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--jobportal-white);
+    background: var(--jobportal-gradient-primary);
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.jobportal-pricing-header {
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--jobportal-gray-100);
+}
+
+.jobportal-pricing-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 16px;
+}
+
+.jobportal-pricing-price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
+.jobportal-price-currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--jobportal-gray-500);
+    margin-top: 8px;
+}
+
+.jobportal-price-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--jobportal-gray-900);
+    line-height: 1;
+}
+
+.jobportal-price-period {
+    font-size: 0.875rem;
+    color: var(--jobportal-gray-500);
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+.jobportal-pricing-features {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.jobportal-pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--jobportal-gray-600);
+}
+
+.jobportal-pricing-features li svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .jobportal-pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .jobportal-pricing-popular {
+        transform: none;
+    }
+
+    .jobportal-pricing-popular:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* ==========================================================================
+   MODERN TESTIMONIALS
+   ========================================================================== */
+.jobportal-testimonials-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--jobportal-white) 0%, var(--jobportal-gray-50) 100%);
+}
+
+.jobportal-testimonials-modern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.jobportal-testimonial-modern {
+    position: relative;
+}
+
+.jobportal-testimonial-modern-inner {
+    height: 100%;
+    background: var(--jobportal-white);
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid var(--jobportal-gray-100);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobportal-testimonial-modern:hover .jobportal-testimonial-modern-inner {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: var(--jobportal-primary-light);
+}
+
+.jobportal-testimonial-modern.featured .jobportal-testimonial-modern-inner {
+    background: var(--jobportal-gradient-primary);
+    border: none;
+}
+
+.jobportal-testimonial-modern.featured .jobportal-testimonial-quote-icon,
+.jobportal-testimonial-modern.featured .jobportal-testimonial-text,
+.jobportal-testimonial-modern.featured .jobportal-testimonial-text p,
+.jobportal-testimonial-modern.featured .jobportal-testimonial-name-modern,
+.jobportal-testimonial-modern.featured .jobportal-testimonial-role-modern {
+    color: var(--jobportal-white);
+}
+
+.jobportal-testimonial-modern.featured .jobportal-testimonial-rating svg {
+    fill: #fbbf24;
+}
+
+.jobportal-testimonial-modern.featured .jobportal-avatar-initials {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--jobportal-white);
+}
+
+.jobportal-testimonial-quote-icon {
+    color: var(--jobportal-primary);
+    opacity: 0.3;
+    margin-bottom: 16px;
+}
+
+.jobportal-testimonial-rating {
+    margin-bottom: 16px;
+}
+
+.jobportal-testimonial-rating svg {
+    fill: #fbbf24;
+}
+
+.jobportal-testimonial-text {
+    flex: 1;
+    margin-bottom: 24px;
+}
+
+.jobportal-testimonial-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--jobportal-gray-600);
+    margin: 0;
+}
+
+.jobportal-testimonial-author-modern {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--jobportal-gray-100);
+}
+
+.jobportal-testimonial-modern.featured .jobportal-testimonial-author-modern {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.jobportal-testimonial-avatar-modern {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.jobportal-testimonial-avatar-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jobportal-avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--jobportal-white);
+    background: var(--jobportal-gradient-primary);
+}
+
+.jobportal-testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.jobportal-testimonial-name-modern {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-testimonial-role-modern {
+    font-size: 13px;
+    color: var(--jobportal-gray-500);
+}
+
+@media (max-width: 1024px) {
+    .jobportal-testimonials-modern {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   CTA SECTION
+   ========================================================================== */
+.jobportal-cta-section {
+    padding: 80px 0;
+    background: var(--jobportal-gradient-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.jobportal-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.jobportal-cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.jobportal-cta-content {
+    flex: 1;
+}
+
+.jobportal-cta-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--jobportal-white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.jobportal-cta-text {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.jobportal-cta-actions {
+    flex-shrink: 0;
+}
+
+.jobportal-btn-white {
+    background: var(--jobportal-white);
+    color: var(--jobportal-primary);
+    border: none;
+}
+
+.jobportal-btn-white:hover {
+    background: var(--jobportal-gray-100);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .jobportal-cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jobportal-cta-content {
+        max-width: 500px;
+    }
+}
+
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+.jobportal-footer {
+    background: var(--jobportal-gray-900);
+    color: var(--jobportal-gray-300);
+}
+
+.jobportal-footer-main {
+    padding: 80px 0 60px;
+}
+
+.jobportal-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 48px;
+}
+
+.jobportal-footer-brand {
+    max-width: 300px;
+}
+
+.jobportal-footer-logo {
+    margin-bottom: 20px;
+}
+
+.jobportal-footer-logo img {
+    max-height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.jobportal-footer-site-title {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--jobportal-white);
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.jobportal-footer-tagline {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--jobportal-gray-400);
+    margin-bottom: 24px;
+}
+
+.jobportal-footer .jobportal-social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.jobportal-footer .jobportal-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--jobportal-gray-400);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.jobportal-footer .jobportal-social-links a:hover {
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+    transform: translateY(-3px);
+}
+
+.jobportal-footer-widget h3,
+.jobportal-footer-widget .widget-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--jobportal-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.jobportal-footer-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jobportal-footer-widget li {
+    margin-bottom: 12px;
+}
+
+.jobportal-footer-widget a {
+    font-size: 14px;
+    color: var(--jobportal-gray-400);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobportal-footer-widget a:hover {
+    color: var(--jobportal-white);
+    padding-left: 4px;
+}
+
+.jobportal-footer-bottom {
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jobportal-footer-bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.jobportal-copyright {
+    font-size: 14px;
+    color: var(--jobportal-gray-500);
+}
+
+.jobportal-footer-nav {
+    display: flex;
+}
+
+.jobportal-footer-menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jobportal-footer-menu a {
+    font-size: 14px;
+    color: var(--jobportal-gray-400);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.jobportal-footer-menu a:hover {
+    color: var(--jobportal-white);
+}
+
+@media (max-width: 1024px) {
+    .jobportal-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jobportal-footer-brand {
+        grid-column: span 2;
+        max-width: none;
+        text-align: center;
+    }
+
+    .jobportal-footer .jobportal-social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .jobportal-footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .jobportal-footer-brand {
+        grid-column: span 1;
+    }
+
+    .jobportal-footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jobportal-footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   TEXT COLOR FIXES FOR GRADIENTS
+   ========================================================================== */
+.jobportal-page-hero {
+    color: var(--jobportal-white);
+}
+
+.jobportal-page-hero-title,
+.jobportal-page-hero-description,
+.jobportal-section-label {
+    color: inherit;
+}
+
+.jobportal-page-hero .jobportal-section-label {
+    color: var(--jobportal-white);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.jobportal-page-hero-small {
+    background: var(--jobportal-gradient-primary);
+    padding: 140px 0 80px;
+    text-align: center;
+}
+
+.jobportal-page-hero-small .jobportal-page-hero-title {
+    color: var(--jobportal-white);
+}
+
+.jobportal-page-hero-small .jobportal-page-hero-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Ensure hero text is always visible */
+.jobportal-hero-title {
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-hero-description {
+    color: var(--jobportal-gray-600);
+}
+
+/* ==========================================================================
+   WORDPRESS COMMENTS STYLING
+   ========================================================================== */
+.jobportal-comments-area {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--jobportal-gray-200);
+}
+
+.jobportal-comments-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.jobportal-comments-title::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: var(--jobportal-gradient-primary);
+    border-radius: 2px;
+}
+
+.jobportal-comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jobportal-comment-list .comment {
+    margin-bottom: 24px;
+}
+
+.jobportal-comment-list .comment-body {
+    background: var(--jobportal-gray-50);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+}
+
+.jobportal-comment-list .comment-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.jobportal-comment-list .comment-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--jobportal-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jobportal-comment-list .comment-author .fn {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--jobportal-gray-900);
+}
+
+.jobportal-comment-list .comment-author .fn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.jobportal-comment-list .comment-author .says {
+    display: none;
+}
+
+.jobportal-comment-list .comment-metadata {
+    font-size: 13px;
+    color: var(--jobportal-gray-500);
+    margin-bottom: 16px;
+}
+
+.jobportal-comment-list .comment-metadata a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.jobportal-comment-list .comment-metadata a:hover {
+    color: var(--jobportal-primary);
+}
+
+.jobportal-comment-list .comment-content {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--jobportal-gray-700);
+}
+
+.jobportal-comment-list .comment-content p {
+    margin: 0 0 12px;
+}
+
+.jobportal-comment-list .comment-content p:last-child {
+    margin-bottom: 0;
+}
+
+.jobportal-comment-list .reply {
+    margin-top: 16px;
+}
+
+.jobportal-comment-list .reply a,
+.jobportal-comment-list .comment-reply-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--jobportal-primary);
+    background: var(--jobportal-white);
+    border: 1px solid var(--jobportal-primary);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.jobportal-comment-list .reply a:hover,
+.jobportal-comment-list .comment-reply-link:hover {
+    background: var(--jobportal-primary);
+    color: var(--jobportal-white);
+}
+
+/* Nested comments */
+.jobportal-comment-list .children {
+    list-style: none;
+    margin: 24px 0 0;
+    padding-left: 32px;
+    border-left: 2px solid var(--jobportal-gray-200);
+}
+
+.jobportal-comment-list .children .comment-body {
+    background: var(--jobportal-white);
+    border: 1px solid var(--jobportal-gray-200);
+}
+
+/* Comment Form */
+.jobportal-comment-form {
+    margin-top: 48px;
+}
+
+.jobportal-comment-form .comment-reply-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 24px;
+}
+
+.jobportal-comment-form .comment-reply-title small {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+
+.jobportal-comment-form .comment-reply-title small a {
+    color: var(--jobportal-primary);
+    text-decoration: none;
+}
+
+.jobportal-comment-form .logged-in-as {
+    font-size: 14px;
+    color: var(--jobportal-gray-600);
+    margin-bottom: 20px;
+}
+
+.jobportal-comment-form .logged-in-as a {
+    color: var(--jobportal-primary);
+    text-decoration: none;
+}
+
+.jobportal-comment-form .comment-form-comment,
+.jobportal-comment-form .comment-form-author,
+.jobportal-comment-form .comment-form-email,
+.jobportal-comment-form .comment-form-url {
+    margin-bottom: 20px;
+}
+
+.jobportal-comment-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+    margin-bottom: 8px;
+}
+
+.jobportal-comment-form input[type="text"],
+.jobportal-comment-form input[type="email"],
+.jobportal-comment-form input[type="url"],
+.jobportal-comment-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: var(--jobportal-gray-900);
+    background: var(--jobportal-white);
+    border: 1px solid var(--jobportal-gray-200);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.jobportal-comment-form input:focus,
+.jobportal-comment-form textarea:focus {
+    outline: none;
+    border-color: var(--jobportal-primary);
+    box-shadow: 0 0 0 3px var(--jobportal-primary-light);
+}
+
+.jobportal-comment-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.jobportal-comment-form .comment-form-cookies-consent {
+    margin-bottom: 20px;
+}
+
+.jobportal-comment-form .comment-form-cookies-consent label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.jobportal-comment-form .comment-form-cookies-consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--jobportal-primary);
+}
+
+.jobportal-comment-form .form-submit {
+    margin-top: 24px;
+}
+
+.jobportal-comment-form .submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--jobportal-white);
+    background: var(--jobportal-gradient-primary);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.jobportal-comment-form .submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Comment Navigation */
+.jobportal-comment-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--jobportal-gray-200);
+}
+
+.jobportal-comment-navigation a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--jobportal-primary);
+    text-decoration: none;
+}
+
+/* No Comments */
+.jobportal-no-comments {
+    text-align: center;
+    padding: 40px;
+    background: var(--jobportal-gray-50);
+    border-radius: 16px;
+    color: var(--jobportal-gray-600);
+}
+
+/* Comments Closed */
+.jobportal-comments-closed {
+    text-align: center;
+    padding: 24px;
+    background: var(--jobportal-gray-100);
+    border-radius: 12px;
+    color: var(--jobportal-gray-500);
+    font-size: 14px;
+}
+
+/* Map Section */
+.jobportal-map-section {
+    width: 100%;
+}
+
+.jobportal-map-container {
+    width: 100%;
+    height: 450px;
+    background: var(--jobportal-gray-100);
+}
+
+.jobportal-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.jobportal-map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--jobportal-gray-100);
+}
+
+.jobportal-map-placeholder-content {
+    text-align: center;
+    color: var(--jobportal-gray-400);
+}
+
+/* Contact Form Styles */
+.jobportal-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.jobportal-contact-info-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 16px;
+}
+
+.jobportal-contact-info-description {
+    font-size: 1rem;
+    color: var(--jobportal-gray-600);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.jobportal-contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.jobportal-contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.jobportal-contact-method-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--jobportal-primary-light);
+    color: var(--jobportal-primary);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.jobportal-contact-method-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--jobportal-gray-900);
+    margin-bottom: 4px;
+}
+
+.jobportal-contact-method-content p {
+    font-size: 14px;
+    color: var(--jobportal-gray-600);
+    margin: 0;
+}
+
+.jobportal-contact-social h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+    margin-bottom: 16px;
+}
+
+.jobportal-contact-form-wrapper {
+    background: var(--jobportal-white);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.jobportal-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.jobportal-form-group {
+    margin-bottom: 20px;
+}
+
+.jobportal-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--jobportal-gray-700);
+    margin-bottom: 8px;
+}
+
+.jobportal-form-group label .required {
+    color: #ef4444;
+}
+
+.jobportal-input,
+.jobportal-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: var(--jobportal-gray-900);
+    background: var(--jobportal-gray-50);
+    border: 1px solid var(--jobportal-gray-200);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.jobportal-input:focus,
+.jobportal-textarea:focus {
+    outline: none;
+    background: var(--jobportal-white);
+    border-color: var(--jobportal-primary);
+    box-shadow: 0 0 0 3px var(--jobportal-primary-light);
+}
+
+.jobportal-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.jobportal-form-consent {
+    margin-bottom: 24px;
+}
+
+.jobportal-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--jobportal-gray-600);
+    cursor: pointer;
+}
+
+.jobportal-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--jobportal-primary);
+    flex-shrink: 0;
+}
+
+.jobportal-checkbox-label a {
+    color: var(--jobportal-primary);
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .jobportal-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .jobportal-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .jobportal-contact-form-wrapper {
+        padding: 24px;
+    }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE STYLES FOR ALL DEVICES
+   ========================================================================== */
+
+/* Base improvements for all screen sizes */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth transitions for hover effects */
+button, a, .jobportal-card, .jobportal-job-card {
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   DESKTOP (1200px+) - Enhance hover states and interactions
+   ========================================================================== */
+@media (min-width: 1200px) {
+    /* Job Cards */
+    .jobportal-job-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Category Cards */
+    .jobportal-category-card:hover {
+        transform: translateY(-4px) scale(1.02);
+        border-color: var(--jobportal-primary);
+    }
+}
+
+/* ==========================================================================
+   TABLET LANDSCAPE (1024px - 1199px)
+   ========================================================================== */
+@media (max-width: 1199px) and (min-width: 1024px) {
+    /* Hero Section */
+    .jobportal-hero-title {
+        font-size: 48px !important;
+    }
+
+    .jobportal-hero-search-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ==========================================================================
+   TABLET (768px - 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* Hero Section */
+    .jobportal-hero-title {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+    }
+
+    .jobportal-hero-description {
+        font-size: 16px !important;
+    }
+
+    /* Category Grid - 3 columns on tablet */
+    [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    /* Job Listings Grid - 2 columns */
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Single Job Layout */
+    [style*="grid-template-columns: 2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    /* Tools Section */
+    [style*="grid-template-columns: repeat(3, 1fr)"][style*="background: linear-gradient"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Stats Grid */
+    [style*="grid-template-columns: repeat(4, 1fr)"][style*="text-align: center"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ==========================================================================
+   MOBILE LANDSCAPE (640px - 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Hero Section */
+    .jobportal-hero-title {
+        font-size: 36px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .jobportal-hero-description {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Search Bar */
+    .jobportal-hero-search-wrapper {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .jobportal-hero-search-wrapper input,
+    .jobportal-hero-search-wrapper select {
+        width: 100% !important;
+        padding: 14px !important;
+    }
+
+    /* Category Grid - 2 columns on mobile landscape */
+    [style*="grid-template-columns: repeat(4, 1fr)"],
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Category Cards */
+    [style*="background: #f8fafc"][style*="padding: 32px 24px"] {
+        padding: 20px 16px !important;
+    }
+
+    [style*="font-size: 48px"] {
+        font-size: 32px !important;
+    }
+
+    /* Featured Jobs */
+    .jobportal-featured-jobs-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Job Card */
+    [style*="display: flex; gap: 20px"][style*="background: white"] {
+        flex-direction: column !important;
+        padding: 20px !important;
+    }
+
+    /* Job Meta */
+    [style*="display: flex; gap: 20px"][style*="font-size: 14px"] {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+
+    /* Tools Section - Single column */
+    [style*="background: linear-gradient"][style*="padding: 40px"] {
+        padding: 24px !important;
+    }
+
+    [style*="font-size: 64px"] {
+        font-size: 40px !important;
+    }
+
+    [style*="font-size: 26px"][style*="font-weight: 800"] {
+        font-size: 20px !important;
+    }
+
+    /* Stats Grid - 2 columns */
+    [style*="grid-template-columns: repeat(4, 1fr)"][style*="text-align: center"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    [style*="font-size: 48px"][style*="font-weight: 800"] {
+        font-size: 32px !important;
+    }
+
+    /* Location Grid */
+    [style*="grid-template-columns: repeat(6, 1fr)"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Single Job Header */
+    [style*="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"] {
+        padding: 40px 20px !important;
+    }
+
+    [style*="font-size: 42px"][style*="margin-bottom: 12px"] {
+        font-size: 28px !important;
+    }
+
+    [style*="font-size: 20px"][style*="opacity: 0.95"] {
+        font-size: 16px !important;
+    }
+
+    /* Job Actions */
+    [style*="display: flex; gap: 12px; align-items: center"] {
+        width: 100% !important;
+        justify-content: stretch !important;
+    }
+
+    [style*="padding: 16px 40px"][style*="background: white"] {
+        flex: 1 !important;
+        padding: 14px 20px !important;
+        font-size: 16px !important;
+    }
+
+    /* Job Description Sections */
+    [style*="background: white"][style*="padding: 40px"] {
+        padding: 24px !important;
+    }
+
+    [style*="font-size: 28px"][style*="margin-bottom: 20px"] {
+        font-size: 22px !important;
+    }
+
+    /* Benefits Grid */
+    [style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   MOBILE PORTRAIT (320px - 639px)
+   ========================================================================== */
+@media (max-width: 639px) {
+    /* General Spacing */
+    [style*="padding: 60px 20px"],
+    [style*="padding: 80px 20px"],
+    [style*="padding: 100px 20px"] {
+        padding: 40px 16px !important;
+    }
+
+    [style*="padding: 120px 0 60px"],
+    [style*="padding: 100px 0 60px"] {
+        padding: 80px 0 40px !important;
+    }
+
+    /* Hero Section */
+    .jobportal-hero-title {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+    }
+
+    .jobportal-hero-description {
+        font-size: 14px !important;
+    }
+
+    /* Section Titles */
+    [style*="font-size: 32px"][style*="margin-bottom: 32px"],
+    [style*="font-size: 36px"] {
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
+    }
+
+    [style*="font-size: 48px"][style*="font-weight: 800"][style*="text-align: center"] {
+        font-size: 28px !important;
+    }
+
+    /* Category Grid - Single column on small mobile */
+    [style*="grid-template-columns: repeat(4, 1fr)"],
+    [style*="grid-template-columns: repeat(3, 1fr)"],
+    [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    /* Category/Location cards */
+    [style*="padding: 20px 16px"][style*="border-radius: 10px"] {
+        padding: 16px 12px !important;
+    }
+
+    /* Job Cards */
+    [style*="border-radius: 16px"][style*="box-shadow"] {
+        border-radius: 12px !important;
+    }
+
+    /* Company Logo in Job Card */
+    [style*="width: 80px; height: 80px"][style*="border-radius: 12px"] {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    /* Job Title */
+    [style*="font-size: 24px"][style*="font-weight: 700"] {
+        font-size: 18px !important;
+    }
+
+    [style*="font-size: 20px"][style*="font-weight: 700"] {
+        font-size: 16px !important;
+    }
+
+    /* Job Meta Icons and Text */
+    [style*="display: flex; gap: 20px"][style*="flex-wrap: wrap"] {
+        gap: 10px !important;
+        font-size: 13px !important;
+    }
+
+    /* Buttons */
+    [style*="padding: 16px"][style*="border-radius: 10px"],
+    [style*="padding: 14px"][style*="border-radius: 8px"] {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+    }
+
+    [style*="padding: 12px 32px"] {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+
+    /* Tools Section - Single column */
+    [style*="background: linear-gradient"][style*="border-radius: 16px"] {
+        padding: 28px 20px !important;
+        text-align: center !important;
+    }
+
+    [style*="font-size: 64px"][style*="margin-bottom: 20px"] {
+        font-size: 36px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Stats Section */
+    [style*="grid-template-columns: repeat(4, 1fr)"][style*="text-align: center"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Location Grid */
+    [style*="grid-template-columns: repeat(6, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Single Job Page */
+    [style*="font-size: 42px"][style*="margin-bottom: 12px"] {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+    }
+
+    [style*="display: flex; justify-content: space-between"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    /* Job Header Actions */
+    [style*="width: 50px; height: 50px"] {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    /* Sidebar Sticky Position */
+    [style*="position: sticky; top: 20px"] {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    /* Benefits Grid */
+    [style*="padding: 16px"][style*="background: #f8fafc"] {
+        padding: 14px !important;
+    }
+
+    /* Form Inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    select,
+    textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+
+    /* Share Buttons */
+    [style*="display: flex; gap: 8px"] {
+        gap: 6px !important;
+    }
+}
+
+/* ==========================================================================
+   VERY SMALL MOBILE (320px - 374px)
+   ========================================================================== */
+@media (max-width: 374px) {
+    /* Extra padding reduction for very small screens */
+    [style*="padding: 40px 16px"] {
+        padding: 24px 12px !important;
+    }
+
+    [style*="padding: 32px"] {
+        padding: 20px !important;
+    }
+
+    [style*="padding: 24px"] {
+        padding: 16px !important;
+    }
+
+    /* Font size adjustments */
+    .jobportal-hero-title {
+        font-size: 24px !important;
+    }
+
+    [style*="font-size: 28px"] {
+        font-size: 20px !important;
+    }
+
+    [style*="font-size: 24px"] {
+        font-size: 18px !important;
+    }
+
+    [style*="font-size: 22px"] {
+        font-size: 18px !important;
+    }
+
+    /* Buttons */
+    [style*="padding: 12px 20px"] {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* ==========================================================================
+   HOVER EFFECTS AND ANIMATIONS (All Devices)
+   ========================================================================== */
+
+/* Category Cards */
+a[style*="background: #f8fafc"][style*="border-radius: 12px"]:hover,
+a[style*="background: #f8fafc"][style*="border-radius: 10px"]:hover {
+    background: #ffffff !important;
+    border-color: var(--jobportal-primary, #4facfe) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Cards */
+[style*="background: white"][style*="border-radius: 16px"][style*="padding: 28px"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Tool Cards */
+[style*="background: linear-gradient"][style*="border-radius: 16px"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button[style*="background: #4facfe"]:hover,
+a[style*="background: #4facfe"]:hover {
+    background: #2b9aff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(79, 172, 254, 0.3);
+}
+
+button[style*="background: white"]:hover {
+    background: #f8fafc !important;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================================================================== */
+
+/* Focus States */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--jobportal-primary, #4facfe);
+    outline-offset: 2px;
+}
+
+/* Touch Target Size (Minimum 44x44px for mobile) */
+@media (max-width: 767px) {
+    button,
+    a[style*="padding"],
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ==========================================================================
+   LOADING STATES & SKELETON SCREENS
+   ========================================================================== */
+
+@keyframes jobportal-shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.jobportal-loading {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 1000px 100%;
+    animation: jobportal-shimmer 2s infinite;
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    /* Hide unnecessary elements when printing */
+    [style*="background: linear-gradient"],
+    button,
+    .jobportal-share,
+    [style*="cursor: pointer"] {
+        display: none !important;
+    }
+
+    /* Ensure content is readable */
+    * {
+        color: #000 !important;
+        background: #fff !important;
+    }
+
+    a {
+        text-decoration: underline !important;
+    }
+
+    /* Page breaks */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+}

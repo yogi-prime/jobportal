@@ -1,0 +1,31 @@
+JOBPORTAL THEME SCREENSHOT PLACEHOLDER
+
+Since I cannot generate actual images, you need to create a screenshot.png file:
+
+REQUIRED SPECS:
+- Size: 1200 x 900 pixels (exact)
+- Format: PNG
+- File name: screenshot.png
+- Location: wordpress/jobportal/screenshot.png
+
+HOW TO CREATE:
+1. Install JobPortal theme on Local/XAMPP WordPress
+2. Open the homepage
+3. Take a full-page screenshot using browser extension:
+   - Chrome: "GoFullPage" extension
+   - Firefox: Built-in screenshot tool (Ctrl+Shift+S)
+4. Crop to 1200x900px showing:
+   - Header with logo
+   - Hero section with main heading
+   - Features section preview
+5. Save as screenshot.png in theme root folder
+
+ALTERNATIVE (Quick Method):
+Use Canva.com to create a mockup:
+1. Create 1200x900px canvas
+2. Add your theme name "JobPortal"
+3. Add tagline "SaaS & Startup Landing Page Theme"
+4. Add mockup browser screenshot
+5. Export as PNG
+
+This file is REQUIRED for WordPress.org and ThemeForest approval.

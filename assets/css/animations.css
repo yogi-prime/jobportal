@@ -1,0 +1,477 @@
+/**
+ * Premium Animations & Hover Effects
+ * Scroll animations, 3D transforms, and micro-interactions
+ *
+ * @package JobPortal
+ */
+
+/* ============================================
+   SMOOTH SCROLL REVEAL ANIMATIONS
+   ============================================ */
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate="fade-up"] {
+    transform: translateY(40px);
+}
+
+[data-animate="fade-down"] {
+    transform: translateY(-40px);
+}
+
+[data-animate="fade-left"] {
+    transform: translateX(-40px);
+}
+
+[data-animate="fade-right"] {
+    transform: translateX(40px);
+}
+
+[data-animate="zoom-in"] {
+    transform: scale(0.9);
+}
+
+[data-animate="zoom-out"] {
+    transform: scale(1.1);
+}
+
+/* Stagger animations for children */
+[data-animate-stagger] > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+[data-animate-stagger].animated > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate-stagger].animated > *:nth-child(1) { transition-delay: 0.1s; }
+[data-animate-stagger].animated > *:nth-child(2) { transition-delay: 0.2s; }
+[data-animate-stagger].animated > *:nth-child(3) { transition-delay: 0.3s; }
+[data-animate-stagger].animated > *:nth-child(4) { transition-delay: 0.4s; }
+[data-animate-stagger].animated > *:nth-child(5) { transition-delay: 0.5s; }
+[data-animate-stagger].animated > *:nth-child(6) { transition-delay: 0.6s; }
+
+/* ============================================
+   3D CARD HOVER EFFECTS
+   ============================================ */
+
+.jobportal-card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jobportal-card-3d:hover {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card tilt effect on mouse move */
+.jobportal-tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.jobportal-tilt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0) 100%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.jobportal-tilt-card:hover::before {
+    opacity: 1;
+}
+
+/* ============================================
+   BUTTON HOVER EFFECTS
+   ============================================ */
+
+.jobportal-btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+.jobportal-btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.jobportal-btn-animated:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Shine effect */
+.jobportal-btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.jobportal-btn-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent);
+    transition: left 0.5s ease;
+}
+
+.jobportal-btn-shine:hover::after {
+    left: 100%;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.jobportal-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   ENHANCED HOVER STATES
+   ============================================ */
+
+/* Job Cards */
+.jobportal-job-card,
+.jobportal-stat-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.jobportal-job-card:hover,
+.jobportal-stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2) !important;
+}
+
+.jobportal-job-card:hover .jobportal-job-title,
+.jobportal-stat-card:hover .jobportal-stat-value {
+    color: #4facfe !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Image zoom on hover */
+.jobportal-image-zoom {
+    overflow: hidden;
+}
+
+.jobportal-image-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.jobportal-image-zoom:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Link underline animation */
+.jobportal-link-animated {
+    position: relative;
+    text-decoration: none;
+}
+
+.jobportal-link-animated::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.jobportal-link-animated:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   GRADIENT ANIMATIONS
+   ============================================ */
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.jobportal-gradient-animated {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+}
+
+/* ============================================
+   PULSE ANIMATIONS
+   ============================================ */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.jobportal-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Subtle pulse for badges */
+@keyframes pulse-subtle {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(79, 172, 254, 0); }
+}
+
+.jobportal-pulse-badge {
+    animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* ============================================
+   LOADING ANIMATIONS
+   ============================================ */
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.jobportal-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Skeleton loading */
+.jobportal-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 37%, #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+/* ============================================
+   MICRO-INTERACTIONS
+   ============================================ */
+
+/* Bounce on hover */
+.jobportal-bounce-hover:hover {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+}
+
+/* Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.jobportal-shake {
+    animation: shake 0.6s ease;
+}
+
+/* Tada animation */
+@keyframes tada {
+    0% { transform: scale(1) rotate(0deg); }
+    10%, 20% { transform: scale(0.9) rotate(-3deg); }
+    30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+    40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.jobportal-tada {
+    animation: tada 1s ease;
+}
+
+/* ============================================
+   NUMBER COUNTER ANIMATION
+   ============================================ */
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.jobportal-count-up {
+    animation: countUp 0.6s ease;
+}
+
+/* ============================================
+   PAGE TRANSITION EFFECTS
+   ============================================ */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jobportal-fade-in {
+    animation: fadeIn 0.6s ease;
+}
+
+.jobportal-slide-in-up {
+    animation: slideInUp 0.6s ease;
+}
+
+.jobportal-slide-in-down {
+    animation: slideInDown 0.6s ease;
+}
+
+/* ============================================
+   PARALLAX EFFECT
+   ============================================ */
+
+.jobportal-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+}
+
+/* ============================================
+   GLASSMORPHISM HOVER
+   ============================================ */
+
+.jobportal-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.jobportal-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .jobportal-glass {
+    background: rgba(30, 41, 59, 0.4);
+    border-color: rgba(71, 85, 105, 0.3);
+}
+
+body.dark-mode .jobportal-glass:hover {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(79, 172, 254, 0.4);
+}
+
+/* ============================================
+   FOCUS STATES (Accessibility)
+   ============================================ */
+
+*:focus-visible {
+    outline: 3px solid #4facfe;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.jobportal-btn:focus-visible,
+.jobportal-tab:focus-visible {
+    outline: 3px solid #4facfe;
+    outline-offset: 4px;
+}
+
+/* ============================================
+   SMOOTH SCROLLING
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   REDUCED MOTION (Accessibility)
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+.transition-fast { transition-duration: 0.15s; }
+.transition-normal { transition-duration: 0.3s; }
+.transition-slow { transition-duration: 0.5s; }
