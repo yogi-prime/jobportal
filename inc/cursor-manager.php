@@ -41,7 +41,13 @@ function careerhub_cursor_manager_page() {
     ?>
 
     <div class="wrap cursor-manager-wrap">
-        <h1>🖱️ Career Hub - Cursor Style Manager</h1>
+        <h1>
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 10px;">
+                <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
+                <path d="M13 13l6 6"/>
+            </svg>
+            Career Hub - Cursor Style Manager
+        </h1>
         <p class="description">Choose your website's cursor style. Preview each style before applying!</p>
 
         <form method="post" action="">
@@ -263,6 +269,17 @@ function careerhub_cursor_manager_page() {
         margin: 0 0 8px;
         font-size: 18px;
         color: #1e293b;
+        line-height: 1.2;
+    }
+
+    .cursor-info input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        cursor: pointer;
+        accent-color: #00B4D8;
+        margin: 0 0 0 0;
+        flex-shrink: 0;
     }
 
     .cursor-info h3 label {
@@ -270,17 +287,7 @@ function careerhub_cursor_manager_page() {
         align-items: center;
         cursor: pointer;
         gap: 10px;
-    }
-
-    .cursor-info input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        accent-color: #00B4D8;
-        margin: 0;
-        vertical-align: middle;
-        position: relative;
-        top: -1px;
+        line-height: 1;
     }
 
     .cursor-info p {
