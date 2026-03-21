@@ -22,7 +22,7 @@ get_header();
     align-items: center;
     justify-content: center;
     padding: 140px 20px 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1B3A5F 0%, #00B4D8 50%, #00C896 100%);
     position: relative;
     overflow: hidden;
 }
@@ -97,7 +97,7 @@ get_header();
 
 .jobportal-form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #00B4D8;
     box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
@@ -122,7 +122,7 @@ get_header();
 }
 
 .jobportal-forgot-link {
-    color: #667eea;
+    color: #00B4D8;
     text-decoration: none;
     font-weight: 600;
 }
@@ -134,7 +134,7 @@ get_header();
 .jobportal-submit-btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1B3A5F 0%, #00B4D8 50%, #00C896 100%);
     color: white;
     border: none;
     border-radius: 10px;
@@ -197,8 +197,8 @@ get_header();
 }
 
 .jobportal-social-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: #00B4D8;
+    color: #00B4D8;
 }
 
 .jobportal-auth-footer {
@@ -208,7 +208,7 @@ get_header();
 }
 
 .jobportal-auth-footer a {
-    color: #667eea;
+    color: #00B4D8;
     text-decoration: none;
     font-weight: 600;
 }

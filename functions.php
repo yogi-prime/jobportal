@@ -760,6 +760,9 @@ require_once JOBPORTAL_DIR . '/inc/page-seeder.php';
 // Admin page creator - Simple button to create pages
 require_once JOBPORTAL_DIR . '/inc/admin-create-pages.php';
 
+// Cursor Manager - Professional cursor styles
+require_once JOBPORTAL_DIR . '/inc/cursor-manager.php';
+
 /**
  * TGM Plugin Activation - Recommended plugins
  */
