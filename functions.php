@@ -870,52 +870,37 @@ add_action('wp_head', 'jobportal_schema_markup');
 // Feature #1: Resume Builder Tool
 // Interactive drag-drop resume creator with live preview
 // Shortcode: [jobportal_resume_builder]
-// Note: Already included via inc/resume-system.php
-/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/resume-builder.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/resume-builder.php';
 }
-*/
 
 // Feature #2: Job Matching Algorithm
 // AI-powered job recommendations with quiz interface
 // Shortcode: [jobportal_job_matcher]
-// Note: Already included via other inc files
-/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/job-matching.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/job-matching.php';
 }
-*/
 
 // Feature #3: Applicant Tracking System (ATS)
 // Employer dashboard for managing applications
 // Shortcode: [jobportal_ats_dashboard]
-// Note: Already included via other inc files
-/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/ats-dashboard.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/ats-dashboard.php';
 }
-*/
 
 // Feature #4: Salary Calculator
 // Industry salary estimator with market comparison
 // Shortcode: [jobportal_salary_calculator]
-// Note: Already included via other inc files
-/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/salary-calculator.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/salary-calculator.php';
 }
-*/
 
 // Feature #5: Interview Scheduler
 // Calendar-based interview scheduling with time slots
 // Shortcode: [jobportal_interview_scheduler]
-// Note: Already included via other inc files
-/*
 if (file_exists(JOBPORTAL_DIR . '/inc/unique-features/interview-scheduler.php')) {
     require_once JOBPORTAL_DIR . '/inc/unique-features/interview-scheduler.php';
 }
-*/
 
 /**
  * Limit Widget Items and Customize Display

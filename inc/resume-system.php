@@ -469,9 +469,9 @@ function jobportal_resume_analytics_widget() {
 }
 
 /**
- * Shortcode: Resume Builder
+ * Shortcode: My Resumes (Basic Version)
  */
-function jobportal_resume_builder_shortcode($atts) {
+function jobportal_my_resumes_shortcode($atts) {
     if (!is_user_logged_in()) {
         ob_start();
         jobportal_job_application_login_gate();
@@ -804,4 +804,4 @@ function jobportal_resume_builder_shortcode($atts) {
     <?php
     return ob_get_clean();
 }
-add_shortcode('jobportal_my_resumes', 'jobportal_resume_builder_shortcode');
+add_shortcode('jobportal_my_resumes', 'jobportal_my_resumes_shortcode');
